@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-background: #f5f2ec;
+    --color-surface: #fffdf8;
+    --color-surface-raised: #ece6dc;
+    --color-foreground: #11100e;
+    --color-muted: #6f6a61;
+    --color-border: rgba(17, 16, 14, 0.12);
+    --color-gold: #c7a46a;
+    color-scheme: light;
+  }
+
+  .dark {
+    --color-background: #0b0a09;
+    --color-surface: #12110f;
+    --color-surface-raised: #1a1815;
+    --color-foreground: #f5f2ec;
+    --color-muted: #aaa49a;
+    --color-border: rgba(245, 242, 236, 0.12);
+    --color-gold: #c7a46a;
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-padding-top: 80px;
+  }
+
+  body {
+    @apply min-h-screen antialiased transition-colors duration-500;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: Inter, "Segoe UI", Tahoma, Arial, sans-serif;
+    text-rendering: optimizeLegibility;
+  }
+
+  [dir="rtl"] body {
+    font-family: Tahoma, Arial, sans-serif;
+  }
+
+  [dir="rtl"] .font-display,
+  [dir="rtl"] .hero-title,
+  [dir="rtl"] .luxury-heading {
+    font-family: Tahoma, Arial, sans-serif;
+    letter-spacing: -0.035em;
+  }
+
+  [dir="rtl"] .hero-title {
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    line-height: 1.08;
+  }
+
+  section[id] {
+    scroll-margin-top: 80px;
+  }
+
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-luxury-gold focus-visible:ring-offset-2;
+    --tw-ring-offset-color: var(--color-background);
+  }
+
+  ::selection {
+    @apply bg-luxury-gold/30 text-luxury-black dark:text-luxury-white;
+  }
+}
+
+@layer components {
+  .luxury-container {
+    @apply mx-auto w-full max-w-7xl px-6 md:px-8 lg:px-12;
+  }
+
+  .luxury-heading {
+    @apply font-display text-4xl font-medium tracking-tight md:text-5xl lg:text-6xl;
+    line-height: 1.08;
+  }
+
+  .hero-title {
+    @apply font-display text-[clamp(3.2rem,8vw,7.4rem)] font-medium tracking-[-0.055em];
+    line-height: 0.95;
+  }
+
+  .luxury-eyebrow {
+    @apply text-xs font-medium uppercase tracking-[0.25em] text-luxury-gold;
+  }
+
+  .luxury-divider {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-luxury-gold/40 to-transparent;
+  }
+
+  .luxury-button-primary {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-none border border-luxury-gold bg-luxury-gold px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-luxury-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-transparent hover:text-luxury-gold;
+  }
+
+  .luxury-button-secondary {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-none border border-current px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] transition-all duration-300 hover:-translate-y-0.5 hover:border-luxury-gold hover:text-luxury-gold;
+  }
+
+  .luxury-card {
+    @apply border border-[var(--color-border)] bg-[var(--color-surface)] p-8 backdrop-blur-sm transition-all duration-500 hover:border-luxury-gold/40;
+  }
+
+  .luxury-input {
+    @apply w-full border-b border-[var(--color-border)] bg-transparent px-0 py-3 text-sm outline-none transition-colors duration-300 placeholder:text-[var(--color-muted)] focus:border-luxury-gold;
+    color: var(--color-foreground);
+  }
+
+  select.luxury-input option {
+    background: var(--color-surface);
+    color: var(--color-foreground);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .hero-grid {
+    background-image:
+      linear-gradient(to right, var(--color-border) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--color-border) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.68),
+      transparent 88%
+    );
+    opacity: 0.3;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

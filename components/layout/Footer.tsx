@@ -1,0 +1,140 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import {
+  Instagram,
+  Linkedin,
+  Mail,
+  MessageCircle,
+  Twitter,
+} from "lucide-react";
+import { LocaleSwitcher } from "@/components/ui/LocaleSwitcher";
+
+const footerLinks = [
+  { href: "/#about", key: "about" as const },
+  { href: "/#services", key: "services" as const },
+  { href: "/#projects", key: "projects" as const },
+  { href: "/#contact", key: "contact" as const },
+];
+
+export function Footer() {
+  const t = useTranslations("footer");
+  const year = new Date().getFullYear();
+  const instagramUrl =
+    process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? "https://www.instagram.com/i_dd_m";
+  const xUrl = process.env.NEXT_PUBLIC_X_URL ?? "https://x.com/i_dd_m";
+  const linkedinUrl =
+    process.env.NEXT_PUBLIC_LINKEDIN_URL ??
+    "https://www.linkedin.com/in/ibrahim-ds";
+  const contactEmail =
+    process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "im.ibrahim.al@gmail.com";
+  const whatsappUrl =
+    process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "https://wa.me/966502757844";
+  const socialLinks = [
+    instagramUrl
+      ? {
+          href: instagramUrl,
+          label: t("links.instagram"),
+          icon: Instagram,
+        }
+      : null,
+    xUrl
+      ? {
+          href: xUrl,
+          label: t("links.x"),
+          icon: Twitter,
+        }
+      : null,
+    linkedinUrl
+      ? {
+          href: linkedinUrl,
+          label: t("links.linkedin"),
+          icon: Linkedin,
+        }
+      : null,
+    whatsappUrl
+      ? {
+          href: whatsappUrl,
+          label: t("links.whatsapp"),
+          icon: MessageCircle,
+        }
+      : null,
+    contactEmail
+      ? {
+          href: `mailto:${contactEmail}`,
+          label: t("links.email"),
+          icon: Mail,
+        }
+      : null,
+  ].filter(Boolean) as {
+    href: string;
+    label: string;
+    icon: typeof Instagram;
+  }[];
+
+  return (
+    <footer className="border-t border-[var(--color-border)] bg-[var(--color-surface)]">
+      <div className="luxury-container py-16 md:py-20">
+        <div className="grid gap-12 md:grid-cols-3 md:gap-8">
+          <div className="space-y-4">
+            <Link href="/" className="inline-block">
+              <span className="font-display text-2xl font-semibold tracking-[0.15em]">
+                BRANKA
+              </span>
+            </Link>
+            <p className="max-w-xs text-sm leading-relaxed text-[var(--color-muted)]">
+              {t("tagline")}
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <p className="luxury-eyebrow">{t("navigation")}</p>
+            <ul className="space-y-2">
+              {footerLinks.map((link) => (
+                <li key={link.key}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-[var(--color-muted)] transition-colors hover:text-luxury-gold"
+                  >
+                    {t(`links.${link.key}`)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <p className="luxury-eyebrow">{t("social")}</p>
+            {socialLinks.length > 0 && (
+              <div className="flex items-center gap-4">
+                {socialLinks.map(({ href, label, icon: Icon }) => (
+                  <a
+                    key={href}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-10 w-10 items-center justify-center border border-[var(--color-border)] transition-all duration-300 hover:border-luxury-gold hover:text-luxury-gold"
+                    aria-label={label}
+                  >
+                    <Icon className="h-4 w-4" />
+                  </a>
+                ))}
+              </div>
+            )}
+            <LocaleSwitcher className="sm:hidden" />
+          </div>
+        </div>
+
+        <div className="luxury-divider my-10" />
+
+        <div className="flex flex-col items-center justify-between gap-4 text-xs uppercase tracking-widest text-[var(--color-muted)] sm:flex-row">
+          <p>
+            &copy; {year} Branka Studio. {t("rights")}
+          </p>
+          <p className="text-luxury-gold">{t("signature")}</p>
+        </div>
+      </div>
+    </footer>
+  );
+}

@@ -1,0 +1,460 @@
+{
+  "metadata": {
+    "brand": "Branka",
+    "title": "Branka | Graphic Design & Digital Marketing",
+    "description": "Branka is a creative platform led by Ibrahim Almusabi, offering brand identity, content design, paid media and digital commerce experiences.",
+    "keywords": "graphic designer, digital marketer, media buyer, brand identity, social media design, paid media, Branka"
+  },
+  "navigation": {
+    "label": "Main navigation",
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Work",
+    "contact": "Contact",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu"
+  },
+  "header": {
+    "studio": "Creative Studio",
+    "homeLabel": "Back to the home page"
+  },
+  "hero": {
+    "eyebrow": "Graphic Designer & Digital Marketer",
+    "title": "Design that earns attention.",
+    "titleAccent": "Marketing that creates impact.",
+    "description": "I help brands build a clear, persuasive presence—from identity and design to content and digital campaigns—with considered thinking and polished execution.",
+    "founder": "Ibrahim Almusabi",
+    "founderRole": "Graphic Designer • Digital Marketer • Media Buyer",
+    "portraitAlt": "Ibrahim Almusabi, founder of Branka",
+    "badge": "Available for projects",
+    "ctaPrimary": "Explore the work",
+    "ctaSecondary": "Start a project",
+    "scroll": "Continue to the Branka introduction",
+    "trust": {
+      "designExperience": "4+ years in design",
+      "marketingExperience": "3+ years in marketing",
+      "market": "Saudi market experience"
+    }
+  },
+  "about": {
+    "eyebrow": "About Branka",
+    "title": "Turning ideas into a presence that is hard to ignore",
+    "descriptionPrimary": "Branka is a creative practice that connects visual thinking with marketing understanding, led by Ibrahim Almusabi to create work that looks strong and serves a clear purpose.",
+    "descriptionSecondary": "I approach each project as one connected system: understand the audience, sharpen the message, then build a visual direction that helps the brand show up with confidence and communicate effectively.",
+    "focus": {
+      "clarity": "Clear thinking",
+      "craft": "Attention to detail",
+      "results": "Purpose-led execution"
+    },
+    "stat1Value": "4+",
+    "stat1Label": "Years in design",
+    "stat2Value": "3+",
+    "stat2Label": "Years in marketing",
+    "stat3Value": "02",
+    "stat3Label": "Complementary disciplines"
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "From idea to presence",
+    "description": "Connected services that help your business look professional and reach its audience with a clearer message.",
+    "items": {
+      "identity": {
+        "title": "Brand Identity",
+        "description": "A coherent visual direction across logo, color, typography and essential applications, built to make your brand recognizable."
+      },
+      "content": {
+        "title": "Content Design",
+        "description": "Social media and advertising visuals that protect brand consistency, communicate quickly and capture attention."
+      },
+      "performance": {
+        "title": "Paid Media",
+        "description": "Meta and TikTok campaign planning and management shaped by the objective and audience, with ongoing performance improvement."
+      },
+      "commerce": {
+        "title": "Digital Commerce",
+        "description": "Sharper storefront presence, product pages and visual assets that support a smoother customer journey and conversion."
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Selected work",
+    "title": "Work organized by discipline",
+    "description": "Explore the complete graphics archive, campaign case studies, e-commerce storefronts and motion samples, clearly organized by discipline.",
+    "tabsLabel": "Filter work by discipline",
+    "open": "View project",
+    "viewProject": "View {title}",
+    "comingSoon": "Being added",
+    "tabs": {
+      "graphics": "Graphics",
+      "marketing": "Marketing",
+      "web": "Web Design",
+      "motion": "Motion & Video"
+    },
+    "graphics": {
+      "title": "Complete graphics archive",
+      "description": "{count} portfolio boards were extracted and organized by project type.",
+      "visibleCount": "{count} works shown",
+      "filtersLabel": "Filter graphics work",
+      "filters": {
+        "all": "All",
+        "logos": "Logos",
+        "identities": "Brand Identities",
+        "social": "Social Media",
+        "infographics": "Infographics",
+        "packaging": "Products & Packaging"
+      },
+      "cardTitle": "{category} — {number}",
+      "imageAlt": "{title} from the Branka portfolio"
+    },
+    "web": {
+      "title": "E-commerce storefronts",
+      "description": "Arabic storefront design and merchandising examples, organizing categories, promotions and products around a clearer shopping experience.",
+      "count": "{count} stores",
+      "category": "E-commerce Store Design",
+      "projects": {
+        "restia": {
+          "title": "Restia Home Store",
+          "description": "A blue-led storefront for bedding and sleep products, with clear categories, promotional banners and easy-to-browse product cards.",
+          "alt": "Restia bedding and sleep-products storefront design"
+        },
+        "perfume": {
+          "title": "Luxury Fragrance Store",
+          "description": "A premium red-and-gold interface for fragrance and care products, highlighting offers, installment options, categories and products.",
+          "alt": "Luxury fragrance and personal-care storefront design"
+        },
+        "manoom": {
+          "title": "Manoom Home Store",
+          "description": "A storefront for sleep and home-textile products with clear visual organization across categories, seasonal offers and product listings.",
+          "alt": "Manoom bedding and sleep-products storefront design"
+        }
+      }
+    },
+    "motion": {
+      "title": "Logo & identity animation",
+      "description": "Short motion-graphics samples exploring different approaches to logo reveals and turning identity elements into cinematic sequences.",
+      "count": "{count} videos",
+      "category": "Motion Graphics • Logo Reveal",
+      "duration": "10 seconds",
+      "unsupported": "Your browser does not support video playback.",
+      "disclaimer": "The featured logos and trademarks belong to their respective owners. These clips are presented as conceptual animation samples and do not imply official affiliation.",
+      "projects": {
+        "alhilal": {
+          "title": "Al Hilal Logo Reveal",
+          "description": "A conceptual sports-logo reveal using light trails and blue particles inside a stadium atmosphere."
+        },
+        "brankaPro": {
+          "title": "Branka Pro Logo Reveal",
+          "description": "A three-dimensional gold identity animation with cinematic light and reflections that reinforce a premium feel."
+        },
+        "arabicCalligraphy": {
+          "title": "Arabic Calligraphy Identity",
+          "description": "A gradual gold calligraphy reveal over a dark textured surface, supported by restrained motion and focused lighting."
+        },
+        "pizzaMascot": {
+          "title": "Pizza Mascot Logo Reveal",
+          "description": "A fast, energetic mascot animation supported by smoke, sparks and bold impact effects."
+        },
+        "turkishRestaurant": {
+          "title": "Turkish Restaurant Identity",
+          "description": "A reveal that builds the mark from grilling and flame elements before resolving into the restaurant identity."
+        },
+        "ministryHealth": {
+          "title": "Ministry of Health Logo Reveal",
+          "description": "A conceptual reveal using flowing green and gold ribbons against a bright, polished environment."
+        },
+        "riyadhHealth": {
+          "title": "Second Riyadh Health Cluster Reveal",
+          "description": "Blue identity elements assemble into the mark through fluid transitions and a polished finishing flare."
+        },
+        "stovall": {
+          "title": "Stovall Group Real Estate Reveal",
+          "description": "An architectural skyline transforms into a complete real-estate identity within a dark corporate scene."
+        },
+        "vision2030": {
+          "title": "Vision 2030 Logo Reveal",
+          "description": "A conceptual sequence of green geometric forms resolving into the Vision 2030 and Ministry of Education mark."
+        }
+      }
+    },
+    "marketing": {
+      "attributionEyebrow": "Documented practical experience",
+      "attributionTitle": "Campaigns I helped manage and deliver",
+      "attribution": "These results are presented within the Branka portfolio as projects I helped manage and deliver as part of a team. The supplied figures and dashboard evidence are preserved without naming other team members.",
+      "resultsNote": "Figures are shown as provided in the supplied portfolio. Campaign periods and currencies vary by platform.",
+      "overall": {
+        "metric1": {
+          "value": "SAR 270,000+",
+          "label": "Total managed ad spend"
+        },
+        "metric2": {
+          "value": "SAR 2,500,000+",
+          "label": "Total attributed sales"
+        },
+        "metric3": {
+          "value": "10x",
+          "label": "Average return on ad spend"
+        }
+      },
+      "overviewCards": {
+        "results": {
+          "title": "Campaign results overview",
+          "alt": "Overview of total campaign spend, sales and return on ad spend"
+        },
+        "method": {
+          "title": "Campaign management method",
+          "alt": "Portfolio page explaining the paid campaign management method"
+        }
+      },
+      "casesEyebrow": "Campaign case studies",
+      "casesTitle": "Figures and evidence by sector",
+      "totalSlides": "{count} campaign slides",
+      "slides": "{count} documented slides",
+      "openCase": "View case",
+      "openSlide": "Open slide {number} from {title}",
+      "slideAlt": "Slide {number} from the {title} case study",
+      "slideNumber": "Slide {number}",
+      "cases": {
+        "pharmacy": {
+          "sector": "Pharmacy & Beauty",
+          "title": "Pharmacy and cosmetics store",
+          "description": "A multi-platform campaign across Google, Snapchat, TikTok and Meta, including the challenge, solution, dashboard evidence and combined result.",
+          "metric1": {
+            "value": "SAR 224,847",
+            "label": "Total ad spend"
+          },
+          "metric2": {
+            "value": "SAR 1,929,018",
+            "label": "Total sales"
+          },
+          "metric3": {
+            "value": "12.63x",
+            "label": "Highest platform ROAS"
+          }
+        },
+        "oud": {
+          "sector": "Oud & Fragrance",
+          "title": "Oud and fragrance e-commerce store",
+          "description": "Campaigns for an oud specialist across Snapchat, TikTok and Meta, with duration, spend, sales and return documented for each platform.",
+          "metric1": {
+            "value": "≈SAR 47,877",
+            "label": "Total ad spend"
+          },
+          "metric2": {
+            "value": "≈SAR 338,885",
+            "label": "Total sales"
+          },
+          "metric3": {
+            "value": "7.56x",
+            "label": "Highest platform ROAS"
+          }
+        },
+        "auto": {
+          "sector": "Automotive Parts",
+          "title": "Automotive parts e-commerce store",
+          "description": "Search and performance campaigns across Google, Snapchat and Meta, documented with result screenshots, campaign periods, spend, sales and return.",
+          "metric1": {
+            "value": "23.9x",
+            "label": "Highest platform ROAS"
+          },
+          "metric2": {
+            "value": "SAR 62,281",
+            "label": "Google sales"
+          },
+          "metric3": {
+            "value": "$17,640",
+            "label": "Snapchat sales"
+          }
+        },
+        "realEstate": {
+          "sector": "Real Estate",
+          "title": "Lead-generation campaign for a property company",
+          "description": "A short qualified-lead campaign showing the challenge, solution, results and a visual before-and-after optimization example.",
+          "metric1": {
+            "value": "345",
+            "label": "Qualified leads"
+          },
+          "metric2": {
+            "value": "SAR 3.75",
+            "label": "Cost per lead"
+          },
+          "metric3": {
+            "value": "10 days",
+            "label": "Campaign duration"
+          }
+        }
+      }
+    },
+    "items": {
+      "brandLuxury": {
+        "category": "Brand Identity",
+        "title": "Bashaer Pro Identity",
+        "description": "A premium black-and-gold identity applied across print and digital touchpoints.",
+        "alt": "Bashaer Pro identity shown on cards, stationery and a phone"
+      },
+      "brandMandarina": {
+        "category": "Brand Identity",
+        "title": "Hadharm Najd Identity",
+        "description": "A locally inspired visual system applied to packaging, stationery and screens.",
+        "alt": "Hadharm Najd identity applied to a box, stationery, cards and a tablet"
+      },
+      "socialPurple": {
+        "category": "Social Media Design",
+        "title": "Talabat Real Estate Campaign",
+        "description": "A consistent social series presenting properties and offers through a clear visual system.",
+        "alt": "A purple set of real estate social posts for Talabat"
+      },
+      "socialBranka": {
+        "category": "Content Design",
+        "title": "Branka Educational Content",
+        "description": "Simple educational posts for business owners, designed within Branka's visual identity.",
+        "alt": "Black and gold educational posts for Branka"
+      },
+      "socialCampaign": {
+        "category": "Digital Campaign",
+        "title": "Automotive Parts Campaign",
+        "description": "A unified visual treatment connecting products, offer and campaign message.",
+        "alt": "Blue campaign designs for automotive parts"
+      },
+      "infographicDigital": {
+        "category": "Infographic",
+        "title": "Educational Digital Content",
+        "description": "Turning information and numbers into clear visuals built for digital platforms.",
+        "alt": "A set of infographic designs displayed on phones"
+      },
+      "packagingBrefan": {
+        "category": "Packaging Design",
+        "title": "Brefan Packaging",
+        "description": "A medical package front with strong color and a clear hierarchy for essential information.",
+        "alt": "Brefan medical bottle and package design"
+      },
+      "packagingMedical": {
+        "category": "Packaging Design",
+        "title": "Nice-GA Packaging",
+        "description": "Medical packaging supported by a three-dimensional visualization of the final product.",
+        "alt": "Nice-GA cream dieline and packaging design"
+      },
+      "mediaBuyerProfile": {
+        "category": "Digital Marketing",
+        "title": "Digital Campaign Management",
+        "description": "A professional introduction to media buying and digital marketing expertise.",
+        "alt": "Ibrahim Almusabi media buyer and digital marketer profile cover"
+      },
+      "campaignMethod": {
+        "category": "Working Method",
+        "title": "Campaign Management Method",
+        "description": "An approach that starts with audience understanding, then testing, measurement and optimization before scaling.",
+        "alt": "A page explaining the paid campaign management method"
+      }
+    },
+    "empty": {
+      "graphics": {
+        "title": "Graphics work",
+        "description": "Graphics work will appear here."
+      },
+      "marketing": {
+        "title": "Marketing work",
+        "description": "Marketing work will appear here."
+      },
+      "web": {
+        "title": "Web design work is being added",
+        "description": "Websites, stores and landing pages will be added once their images and links are received."
+      },
+      "motion": {
+        "title": "Motion and video work is being added",
+        "description": "Logo animation, motion graphics and advertising videos will be added once the original files are received."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Start a project",
+    "title": "Let's build something worth noticing",
+    "description": "Share your project and its objective. You will receive a clear response outlining the scope and the right next step.",
+    "promises": {
+      "reply": "A clear, direct response to your inquiry",
+      "scope": "Scope and deliverables agreed before work begins",
+      "language": "Communication available in Arabic and English"
+    },
+    "channels": {
+      "instagram": "Instagram",
+      "x": "X",
+      "linkedin": "LinkedIn",
+      "whatsapp": "WhatsApp",
+      "email": "Email"
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your full name",
+      "contact": "Contact details",
+      "contactPlaceholder": "Email or phone number",
+      "service": "Service",
+      "servicePlaceholder": "Choose a service",
+      "services": {
+        "identity": "Brand identity",
+        "content": "Content design",
+        "performance": "Paid media",
+        "commerce": "Digital commerce",
+        "other": "Another service"
+      },
+      "message": "Project details",
+      "messagePlaceholder": "Tell us about the business, objective and expected timing...",
+      "submit": "Send by email",
+      "copy": "Copy inquiry details",
+      "emailSubject": "New Branka website inquiry from {name}",
+      "summary": {
+        "name": "Name",
+        "contact": "Contact",
+        "service": "Service"
+      },
+      "status": {
+        "opening": "Your email app will open to complete the message.",
+        "copied": "The inquiry details were copied. You can send them through your preferred channel.",
+        "copyError": "Automatic copying failed. Please copy the details manually."
+      },
+      "errors": {
+        "nameMin": "Name must be at least 2 characters",
+        "nameMax": "Name must be no longer than 100 characters",
+        "contactMin": "Enter valid contact details",
+        "contactMax": "Contact details are too long",
+        "serviceRequired": "Choose the service you need",
+        "messageMin": "Write at least 10 characters about the project",
+        "messageMax": "Message must be no longer than 2000 characters"
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Design and marketing working together to build a clearer, more effective presence.",
+    "navigation": "Quick links",
+    "social": "Connect",
+    "signature": "Designed with intention",
+    "rights": "All rights reserved.",
+    "links": {
+      "about": "About Branka",
+      "services": "Services",
+      "projects": "Work",
+      "contact": "Start a project",
+      "instagram": "Instagram",
+      "x": "X",
+      "linkedin": "LinkedIn",
+      "whatsapp": "WhatsApp",
+      "email": "Email"
+    }
+  },
+  "theme": {
+    "light": "Switch to light mode",
+    "dark": "Switch to dark mode",
+    "toggle": "Toggle color mode"
+  },
+  "locale": {
+    "switch": "Switch language",
+    "en": "English",
+    "ar": "العربية"
+  },
+  "loading": {
+    "studio": "BRANKA"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The link may have changed or the page you are looking for is unavailable."
+  }
+}
