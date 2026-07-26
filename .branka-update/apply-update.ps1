@@ -28,32 +28,42 @@ function Update-JsonFile {
     }
 
     $content = Read-Utf8File $Path
+    $content = [regex]::Replace(
+        $content,
+        '"studio"\s*:\s*"[^"]*"',
+        '"studio": "Ibrahim Almusabi"'
+    )
 
     if ($Language -eq "ar") {
-        $content = $content.Replace('"studio": "استوديو إبداعي"', '"studio": "Ibrahim Almusabi"')
-        $content = $content.Replace('"studio": "Creative Studio"', '"studio": "Ibrahim Almusabi"')
-        $content = $content.Replace('"+4 سنوات في التصميم"', '"+5 سنوات في التصميم"')
-        $content = $content.Replace('"4+ سنوات في التصميم"', '"+5 سنوات في التصميم"')
-        $content = $content.Replace('"stat1Value": "+4"', '"stat1Value": "+5"')
-        $content = $content.Replace('"stat1Value": "4+"', '"stat1Value": "+5"')
         $content = [regex]::Replace(
             $content,
-            '"signature"\s*:\s*"[^"]*"',
-            '"backToTop": "العودة إلى أعلى الصفحة"'
+            '("designExperience"\s*:\s*")\+?4',
+            '${1}+5'
+        )
+        $content = [regex]::Replace(
+            $content,
+            '("stat1Value"\s*:\s*")\+?4(")',
+            '${1}+5${2}'
         )
     }
     else {
-        $content = $content.Replace('"studio": "Creative Studio"', '"studio": "Ibrahim Almusabi"')
-        $content = $content.Replace('"studio": "استوديو إبداعي"', '"studio": "Ibrahim Almusabi"')
-        $content = $content.Replace('"4+ years in design"', '"5+ years in design"')
-        $content = $content.Replace('"stat1Value": "4+"', '"stat1Value": "5+"')
-        $content = $content.Replace('"stat1Value": "+4"', '"stat1Value": "5+"')
         $content = [regex]::Replace(
             $content,
-            '"signature"\s*:\s*"[^"]*"',
-            '"backToTop": "Back to top"'
+            '("designExperience"\s*:\s*")4\+',
+            '${1}5+'
+        )
+        $content = [regex]::Replace(
+            $content,
+            '("stat1Value"\s*:\s*")4\+(")',
+            '${1}5+${2}'
         )
     }
+
+    $content = [regex]::Replace(
+        $content,
+        '"signature"\s*:\s*"[^"]*"',
+        '"backToTop": "Back to top"'
+    )
 
     Write-Utf8File $Path $content
 }
@@ -73,7 +83,7 @@ $backToTopButton = @'
             aria-label={t("backToTop")}
             title={t("backToTop")}
           >
-            <span aria-hidden="true">↑</span>
+            <span aria-hidden="true">&#8593;</span>
           </button>
 '@
 
@@ -84,7 +94,7 @@ $footer = [regex]::Replace(
     [System.Text.RegularExpressions.RegexOptions]::Singleline
 )
 
-if ($footer -eq $footerBefore -and $footer -notmatch 'branka-back-to-top') {
+if ($footer -eq $footerBefore -and $footer -notmatch "branka-back-to-top") {
     throw "The current footer format is different. No files were removed."
 }
 
@@ -172,6 +182,15 @@ $assetsSource = Join-Path $updateRoot "public"
 $assetsDestination = Join-Path $projectRoot "public"
 if (Test-Path $assetsSource) {
     Copy-Item -Path (Join-Path $assetsSource "*") -Destination $assetsDestination -Recurse -Force
+}
+
+Get-ChildItem -Path $projectRoot -File -Filter "*.cmd" | ForEach-Object {
+    if ($_.Name -ne "apply-branka-update.cmd") {
+        $cmdContent = [System.IO.File]::ReadAllText($_.FullName)
+        if ($cmdContent -match "title Branka Update") {
+            Remove-Item -LiteralPath $_.FullName -Force
+        }
+    }
 }
 
 Write-Host ""
