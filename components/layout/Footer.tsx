@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import {
+  ArrowUp,
   Instagram,
   Linkedin,
   Mail,
@@ -166,18 +166,15 @@ export function Footer() {
           <p>
             &copy; {year} Branka Studio. {t("rights")}
           </p>
-          <p className="inline-flex items-center gap-2 text-luxury-gold">
-            <span className="relative h-5 w-5 overflow-hidden rounded">
-              <Image
-                src="/icons/branka-mark.png"
-                alt=""
-                fill
-                sizes="20px"
-                className="object-cover"
-              />
-            </span>
-            {t("signature")}
-          </p>
+          <button
+            type="button"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="branka-back-to-top"
+            aria-label={t("backToTop")}
+            title={t("backToTop")}
+          >
+            <ArrowUp className="h-5 w-5" aria-hidden="true" />
+          </button>
         </div>
       </div>
     </footer>

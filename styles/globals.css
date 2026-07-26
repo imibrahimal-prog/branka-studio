@@ -4,9 +4,9 @@
 
 @layer base {
   :root {
-    --color-background: #f3eee9;
-    --color-surface: #fffaf6;
-    --color-surface-raised: #eadfd6;
+    --color-background: #ffe2d9;
+    --color-surface: #ffe2d9;
+    --color-surface-raised: #efcfc4;
     --color-foreground: #21140e;
     --color-muted: #75645b;
     --color-border: rgba(63, 36, 24, 0.13);
@@ -71,19 +71,6 @@
 
   ::selection {
     @apply bg-luxury-gold/30 text-luxury-black dark:text-luxury-white;
-  }
-
-  @media (pointer: fine) {
-    body,
-    a,
-    button,
-    input,
-    select,
-    textarea,
-    summary,
-    video {
-      cursor: none;
-    }
   }
 }
 
@@ -164,6 +151,10 @@
   .luxury-button-whatsapp:hover svg {
     @apply text-white;
   }
+
+  .branka-back-to-top {
+    @apply inline-flex h-14 w-14 items-center justify-center rounded-full border border-luxury-gold bg-luxury-gold text-[#2a1912] shadow-[0_16px_40px_rgba(42,25,18,0.2)] transition-all duration-300 hover:-translate-y-1 hover:bg-luxury-gold-light;
+  }
 }
 
 @layer utilities {
@@ -217,6 +208,31 @@
 
   [dir="rtl"] .sector-marquee {
     animation-direction: reverse;
+  }
+
+  html:not(.dark) .branka-site-header {
+    border-color: rgba(232, 201, 143, 0.32);
+    background: rgba(42, 25, 18, 0.96);
+    box-shadow: 0 12px 36px rgba(42, 25, 18, 0.16);
+  }
+
+  html:not(.dark) .branka-site-header .branka-nav-shell {
+    border-color: rgba(232, 201, 143, 0.25);
+    background: rgba(92, 57, 40, 0.58);
+  }
+
+  html:not(.dark) .branka-site-header .branka-nav-link {
+    color: #e8c98f;
+  }
+
+  html:not(.dark) .branka-site-header .branka-nav-link:hover {
+    background: rgba(232, 201, 143, 0.12);
+    color: #ffe2d9;
+  }
+
+  html:not(.dark) .branka-site-header .font-display,
+  html:not(.dark) .branka-site-header button {
+    color: #e8c98f;
   }
 }
 

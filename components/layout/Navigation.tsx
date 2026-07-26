@@ -46,7 +46,7 @@ export function Navigation({
     <>
       <nav
         className={cn(
-          "hidden items-center gap-1 rounded-full border border-[var(--color-border)] bg-[var(--color-background)] p-1.5 lg:flex",
+          "branka-nav-shell hidden items-center gap-1 rounded-full border border-[var(--color-border)] bg-[var(--color-background)] p-1.5 lg:flex",
           inverse && "border-white/10 bg-white/[0.045]",
           className,
         )}
@@ -57,7 +57,7 @@ export function Navigation({
             key={item.key}
             href={item.href}
             className={cn(
-              "rounded-full px-4 py-2 text-xs font-semibold transition-colors duration-300",
+              "branka-nav-link rounded-full px-4 py-2 text-xs font-semibold transition-colors duration-300",
               inverse
                 ? "text-white/55 hover:bg-white/10 hover:text-white"
                 : "text-[var(--color-muted)] hover:bg-[var(--color-surface)] hover:text-[var(--color-foreground)]",
@@ -112,7 +112,7 @@ export function Navigation({
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
                     className={cn(
-                      "font-display text-3xl font-semibold transition-colors hover:text-luxury-gold",
+                      "branka-nav-link font-display text-3xl font-semibold transition-colors hover:text-luxury-gold",
                       inverse ? "text-white" : "text-[var(--color-foreground)]",
                     )}
                   >

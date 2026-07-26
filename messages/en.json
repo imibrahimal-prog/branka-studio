@@ -16,7 +16,7 @@
     "menuClose": "Close menu"
   },
   "header": {
-    "studio": "Creative Studio",
+    "studio": "Ibrahim Almusabi",
     "homeLabel": "Back to the home page"
   },
   "hero": {
@@ -38,7 +38,7 @@
     },
     "metrics": {
       "metric1": {
-        "value": "4+",
+        "value": "5+",
         "label": "years of design experience"
       },
       "metric2": {
@@ -58,7 +58,7 @@
     "ctaSecondary": "Contact me",
     "scroll": "Continue to the Branka introduction",
     "trust": {
-      "designExperience": "4+ years in design",
+      "designExperience": "5+ years in design",
       "marketingExperience": "3+ years in marketing",
       "market": "Saudi market experience"
     }
@@ -73,7 +73,7 @@
       "craft": "Attention to detail",
       "results": "Purpose-led execution"
     },
-    "stat1Value": "4+",
+    "stat1Value": "5+",
     "stat1Label": "Years in design",
     "stat2Value": "3+",
     "stat2Label": "Years in marketing",
@@ -526,7 +526,7 @@
   "footer": {
     "tagline": "I turn ideas into exceptional identities and visual experiences. Branka is a creative platform led by Ibrahim Almusabi, combining design, marketing and motion to build stronger brands.",
     "achievements": {
-      "design": "4+ years of design experience",
+      "design": "5+ years of design experience",
       "marketing": "3+ years of marketing experience",
       "results": "SAR 2.5M+ in documented campaign results"
     },
@@ -543,7 +543,7 @@
       "web": "Web and store design"
     },
     "social": "Connect",
-    "signature": "Designed with intention",
+    "backToTop": "Back to top",
     "rights": "All rights reserved.",
     "links": {
       "about": "About Branka",

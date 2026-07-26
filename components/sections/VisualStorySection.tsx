@@ -11,7 +11,6 @@ const slides = [
   "/projects/graphics/infographics/infographic-20.jpg",
   "/projects/graphics/infographics/infographic-21.jpg",
   "/projects/graphics/infographics/infographic-22.jpg",
-  "/projects/graphics/infographics/infographic-23.jpg",
 ] as const;
 
 export function VisualStorySection() {
@@ -116,7 +115,7 @@ export function VisualStorySection() {
                 </div>
               </div>
 
-              <div className="mt-4 grid grid-cols-4 gap-2">
+              <div className="mt-4 grid grid-cols-3 gap-2">
                 {slides.map((slide, index) => (
                   <button
                     key={slide}

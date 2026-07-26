@@ -75,7 +75,7 @@ const graphicsProjects: GraphicsProject[] = [
     category: "social" as const,
     order: index + 2,
   })),
-  ...Array.from({ length: 3 }, (_, index) => ({
+  ...Array.from({ length: 2 }, (_, index) => ({
     image: `/projects/graphics/infographics/infographic-${index + 21}.jpg`,
     category: "infographics" as const,
     order: index + 2,

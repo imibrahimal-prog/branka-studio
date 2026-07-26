@@ -16,7 +16,7 @@ export function Header() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#120b08]/88 text-white backdrop-blur-xl"
+      className="branka-site-header fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#120b08]/88 text-white backdrop-blur-xl"
     >
       <div className="luxury-container flex h-[72px] items-center justify-between md:h-[84px]">
         <Link href="/" className="group" aria-label={t("homeLabel")}>

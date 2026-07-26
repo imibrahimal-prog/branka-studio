@@ -27,7 +27,7 @@ export function BrandLogo({
           fill
           priority
           sizes={compact ? "56px" : "67px"}
-          className="object-cover"
+          className="object-contain p-1.5"
         />
       </span>
       <span className="flex flex-col gap-0.5">
@@ -40,7 +40,7 @@ export function BrandLogo({
           BRANKA
         </span>
         <span className="text-[9px] font-semibold uppercase tracking-[0.3em] text-luxury-gold">
-          Creative Studio
+          Ibrahim Almusabi
         </span>
       </span>
     </span>
