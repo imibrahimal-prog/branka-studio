@@ -8,6 +8,10 @@ import { notFound } from "next/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { AppShell } from "@/components/layout/AppShell";
+import "@fontsource/ibm-plex-sans-arabic/arabic-400.css";
+import "@fontsource/ibm-plex-sans-arabic/arabic-500.css";
+import "@fontsource/ibm-plex-sans-arabic/arabic-600.css";
+import "@fontsource/ibm-plex-sans-arabic/arabic-700.css";
 import "../globals.css";
 
 type Props = {
@@ -46,7 +50,9 @@ export async function generateMetadata({ params }: Props) {
       siteName: t("brand"),
     },
     icons: {
-      icon: "/icons/favicon.svg",
+      icon: "/icons/branka-mark.png",
+      shortcut: "/icons/branka-mark.png",
+      apple: "/icons/branka-mark.png",
     },
   };
 }

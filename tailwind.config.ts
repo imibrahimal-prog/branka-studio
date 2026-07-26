@@ -20,9 +20,16 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["Inter", "Segoe UI", "Tahoma", "Arial", "sans-serif"],
+        sans: [
+          "Inter",
+          "Segoe UI",
+          "IBM Plex Sans Arabic",
+          "Tahoma",
+          "Arial",
+          "sans-serif",
+        ],
         display: ["Georgia", "Times New Roman", "serif"],
-        arabic: ["Tahoma", "Arial", "sans-serif"],
+        arabic: ["IBM Plex Sans Arabic", "Tahoma", "Arial", "sans-serif"],
       },
       fontSize: {
         "hero-sm": [

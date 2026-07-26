@@ -16,7 +16,13 @@ const navItems = [
   { href: "/#contact", key: "contact" as const },
 ];
 
-export function Navigation({ className }: { className?: string }) {
+export function Navigation({
+  className,
+  inverse = false,
+}: {
+  className?: string;
+  inverse?: boolean;
+}) {
   const t = useTranslations("navigation");
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -39,24 +45,35 @@ export function Navigation({ className }: { className?: string }) {
   return (
     <>
       <nav
-        className={cn("hidden items-center gap-8 lg:flex", className)}
+        className={cn(
+          "hidden items-center gap-1 rounded-full border border-[var(--color-border)] bg-[var(--color-background)] p-1.5 lg:flex",
+          inverse && "border-white/10 bg-white/[0.045]",
+          className,
+        )}
         aria-label={t("label")}
       >
         {navItems.map((item) => (
           <Link
             key={item.key}
             href={item.href}
-            className="group relative text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-foreground)] transition-colors duration-300 hover:text-luxury-gold"
+            className={cn(
+              "rounded-full px-4 py-2 text-xs font-semibold transition-colors duration-300",
+              inverse
+                ? "text-white/55 hover:bg-white/10 hover:text-white"
+                : "text-[var(--color-muted)] hover:bg-[var(--color-surface)] hover:text-[var(--color-foreground)]",
+            )}
           >
             {t(item.key)}
-            <span className="absolute -bottom-1 start-0 h-px w-0 bg-luxury-gold transition-all duration-300 group-hover:w-full" />
           </Link>
         ))}
       </nav>
 
       <button
         type="button"
-        className="flex h-9 w-9 items-center justify-center lg:hidden"
+        className={cn(
+          "flex h-9 w-9 items-center justify-center lg:hidden",
+          inverse && "text-white",
+        )}
         onClick={() => setMobileOpen((prev) => !prev)}
         aria-expanded={mobileOpen}
         aria-label={mobileOpen ? t("menuClose") : t("menuOpen")}
@@ -71,7 +88,10 @@ export function Navigation({ className }: { className?: string }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-luxury-black/95 backdrop-blur-md lg:hidden"
+            className={cn(
+              "fixed inset-0 z-40 backdrop-blur-md lg:hidden",
+              inverse ? "bg-[#120b08]/97" : "bg-[var(--color-surface)]/95",
+            )}
           >
             <motion.nav
               initial={{ opacity: 0, y: 20 }}
@@ -91,13 +111,19 @@ export function Navigation({ className }: { className?: string }) {
                   <Link
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className="font-display text-3xl font-light uppercase tracking-widest text-luxury-white transition-colors hover:text-luxury-gold"
+                    className={cn(
+                      "font-display text-3xl font-semibold transition-colors hover:text-luxury-gold",
+                      inverse ? "text-white" : "text-[var(--color-foreground)]",
+                    )}
                   >
                     {t(item.key)}
                   </Link>
                 </motion.div>
               ))}
-              <LocaleSwitcher className="mt-4 rounded-full border border-white/15 bg-white/5 px-3 py-2" />
+              <LocaleSwitcher
+                inverse={inverse}
+                className="mt-4 rounded-full border border-white/15 bg-white/5 px-3 py-2"
+              />
             </motion.nav>
           </motion.div>
         )}

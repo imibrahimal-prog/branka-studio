@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import {
@@ -10,6 +11,7 @@ import {
   Twitter,
 } from "lucide-react";
 import { LocaleSwitcher } from "@/components/ui/LocaleSwitcher";
+import { BrandLogo } from "@/components/ui/BrandLogo";
 
 const footerLinks = [
   { href: "/#about", key: "about" as const },
@@ -17,6 +19,16 @@ const footerLinks = [
   { href: "/#projects", key: "projects" as const },
   { href: "/#contact", key: "contact" as const },
 ];
+const specialtyKeys = [
+  "identity",
+  "branding",
+  "events",
+  "environmental",
+  "presentations",
+  "marketing",
+  "motion",
+  "web",
+] as const;
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -75,17 +87,25 @@ export function Footer() {
 
   return (
     <footer className="border-t border-[var(--color-border)] bg-[var(--color-surface)]">
-      <div className="luxury-container py-16 md:py-20">
-        <div className="grid gap-12 md:grid-cols-3 md:gap-8">
-          <div className="space-y-4">
-            <Link href="/" className="inline-block">
-              <span className="font-display text-2xl font-semibold tracking-[0.15em]">
-                BRANKA
-              </span>
+      <div className="luxury-container py-14 md:py-16">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.35fr_0.65fr_0.75fr_0.75fr] lg:gap-10">
+          <div className="space-y-5">
+            <Link href="/" className="inline-flex">
+              <BrandLogo />
             </Link>
-            <p className="max-w-xs text-sm leading-relaxed text-[var(--color-muted)]">
+            <p className="max-w-xl text-sm leading-7 text-[var(--color-muted)] md:text-base">
               {t("tagline")}
             </p>
+            <div className="flex max-w-2xl flex-wrap gap-2.5">
+              {(["design", "marketing", "results"] as const).map((key) => (
+                <span
+                  key={key}
+                  className="rounded-full border border-[var(--color-border)] bg-[var(--color-background)] px-4 py-2 text-xs font-semibold text-[var(--color-muted)]"
+                >
+                  {t(`achievements.${key}`)}
+                </span>
+              ))}
+            </div>
           </div>
 
           <div className="space-y-4">
@@ -105,6 +125,20 @@ export function Footer() {
           </div>
 
           <div className="space-y-4">
+            <p className="luxury-eyebrow">{t("specialtiesTitle")}</p>
+            <ul className="space-y-2.5">
+              {specialtyKeys.map((key) => (
+                <li
+                  key={key}
+                  className="text-sm leading-6 text-[var(--color-muted)]"
+                >
+                  {t(`specialties.${key}`)}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="space-y-4">
             <p className="luxury-eyebrow">{t("social")}</p>
             {socialLinks.length > 0 && (
               <div className="flex items-center gap-4">
@@ -114,7 +148,7 @@ export function Footer() {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-10 w-10 items-center justify-center border border-[var(--color-border)] transition-all duration-300 hover:border-luxury-gold hover:text-luxury-gold"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-background)] transition-all duration-300 hover:-translate-y-0.5 hover:border-luxury-gold hover:text-luxury-gold"
                     aria-label={label}
                   >
                     <Icon className="h-4 w-4" />
@@ -132,7 +166,18 @@ export function Footer() {
           <p>
             &copy; {year} Branka Studio. {t("rights")}
           </p>
-          <p className="text-luxury-gold">{t("signature")}</p>
+          <p className="inline-flex items-center gap-2 text-luxury-gold">
+            <span className="relative h-5 w-5 overflow-hidden rounded">
+              <Image
+                src="/icons/branka-mark.png"
+                alt=""
+                fill
+                sizes="20px"
+                className="object-cover"
+              />
+            </span>
+            {t("signature")}
+          </p>
         </div>
       </div>
     </footer>

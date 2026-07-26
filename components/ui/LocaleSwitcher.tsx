@@ -5,7 +5,13 @@ import { usePathname, useRouter } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import type { Locale } from "@/i18n/routing";
 
-export function LocaleSwitcher({ className }: { className?: string }) {
+export function LocaleSwitcher({
+  className,
+  inverse = false,
+}: {
+  className?: string;
+  inverse?: boolean;
+}) {
   const locale = useLocale() as Locale;
   const pathname = usePathname();
   const router = useRouter();
@@ -33,7 +39,9 @@ export function LocaleSwitcher({ className }: { className?: string }) {
             "px-2 py-1 text-xs font-medium uppercase tracking-widest transition-colors duration-300",
             locale === loc
               ? "text-luxury-gold"
-              : "text-[var(--color-muted)] hover:text-[var(--color-foreground)]",
+              : inverse
+                ? "text-white/45 hover:text-white"
+                : "text-[var(--color-muted)] hover:text-[var(--color-foreground)]",
           )}
           aria-current={locale === loc ? "true" : undefined}
         >

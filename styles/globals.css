@@ -4,24 +4,24 @@
 
 @layer base {
   :root {
-    --color-background: #f5f2ec;
-    --color-surface: #fffdf8;
-    --color-surface-raised: #ece6dc;
-    --color-foreground: #11100e;
-    --color-muted: #6f6a61;
-    --color-border: rgba(17, 16, 14, 0.12);
-    --color-gold: #c7a46a;
+    --color-background: #f3eee9;
+    --color-surface: #fffaf6;
+    --color-surface-raised: #eadfd6;
+    --color-foreground: #21140e;
+    --color-muted: #75645b;
+    --color-border: rgba(63, 36, 24, 0.13);
+    --color-gold: #b78a56;
     color-scheme: light;
   }
 
   .dark {
-    --color-background: #0b0a09;
-    --color-surface: #12110f;
-    --color-surface-raised: #1a1815;
-    --color-foreground: #f5f2ec;
-    --color-muted: #aaa49a;
-    --color-border: rgba(245, 242, 236, 0.12);
-    --color-gold: #c7a46a;
+    --color-background: #120b08;
+    --color-surface: #1b110d;
+    --color-surface-raised: #2a1912;
+    --color-foreground: #f8f2ed;
+    --color-muted: #b6a79d;
+    --color-border: rgba(248, 242, 237, 0.12);
+    --color-gold: #c49a67;
     color-scheme: dark;
   }
 
@@ -33,24 +33,27 @@
     @apply min-h-screen antialiased transition-colors duration-500;
     background-color: var(--color-background);
     color: var(--color-foreground);
-    font-family: Inter, "Segoe UI", Tahoma, Arial, sans-serif;
+    font-family:
+      Inter, "Segoe UI", "IBM Plex Sans Arabic", Tahoma, Arial, sans-serif;
+    font-size: 16px;
     text-rendering: optimizeLegibility;
   }
 
   [dir="rtl"] body {
-    font-family: Tahoma, Arial, sans-serif;
+    font-family: "IBM Plex Sans Arabic", Tahoma, Arial, sans-serif;
   }
 
   [dir="rtl"] .font-display,
   [dir="rtl"] .hero-title,
   [dir="rtl"] .luxury-heading {
-    font-family: Tahoma, Arial, sans-serif;
-    letter-spacing: -0.035em;
+    font-family: "IBM Plex Sans Arabic", Tahoma, Arial, sans-serif;
+    letter-spacing: -0.025em;
   }
 
   [dir="rtl"] .hero-title {
-    font-size: clamp(3rem, 7vw, 6.5rem);
-    line-height: 1.08;
+    font-size: clamp(2.75rem, 5.4vw, 5.4rem);
+    line-height: 1.12;
+    letter-spacing: -0.045em;
   }
 
   section[id] {
@@ -69,25 +72,38 @@
   ::selection {
     @apply bg-luxury-gold/30 text-luxury-black dark:text-luxury-white;
   }
+
+  @media (pointer: fine) {
+    body,
+    a,
+    button,
+    input,
+    select,
+    textarea,
+    summary,
+    video {
+      cursor: none;
+    }
+  }
 }
 
 @layer components {
   .luxury-container {
-    @apply mx-auto w-full max-w-7xl px-6 md:px-8 lg:px-12;
+    @apply mx-auto w-full max-w-[1440px] px-5 sm:px-7 md:px-10 lg:px-16;
   }
 
   .luxury-heading {
-    @apply font-display text-4xl font-medium tracking-tight md:text-5xl lg:text-6xl;
-    line-height: 1.08;
+    @apply font-display text-[2.45rem] font-semibold tracking-tight md:text-5xl lg:text-6xl;
+    line-height: 1.1;
   }
 
   .hero-title {
-    @apply font-display text-[clamp(3.2rem,8vw,7.4rem)] font-medium tracking-[-0.055em];
-    line-height: 0.95;
+    @apply font-display text-[clamp(3.2rem,6vw,6rem)] font-semibold tracking-[-0.05em];
+    line-height: 1;
   }
 
   .luxury-eyebrow {
-    @apply text-xs font-medium uppercase tracking-[0.25em] text-luxury-gold;
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-luxury-gold;
   }
 
   .luxury-divider {
@@ -95,25 +111,58 @@
   }
 
   .luxury-button-primary {
-    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-none border border-luxury-gold bg-luxury-gold px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] text-luxury-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-transparent hover:text-luxury-gold;
+    @apply inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full border border-luxury-black bg-luxury-black px-8 py-3.5 text-sm font-semibold text-luxury-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-luxury-gold hover:text-luxury-black dark:border-luxury-white dark:bg-luxury-white dark:text-luxury-black;
   }
 
   .luxury-button-secondary {
-    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-none border border-current px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.16em] transition-all duration-300 hover:-translate-y-0.5 hover:border-luxury-gold hover:text-luxury-gold;
+    @apply inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] px-8 py-3.5 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:border-luxury-gold hover:text-luxury-gold;
   }
 
   .luxury-card {
-    @apply border border-[var(--color-border)] bg-[var(--color-surface)] p-8 backdrop-blur-sm transition-all duration-500 hover:border-luxury-gold/40;
+    @apply rounded-[1.75rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-8 shadow-[0_20px_70px_rgba(17,18,16,0.05)] transition-all duration-500 hover:-translate-y-1 hover:border-luxury-gold/40;
   }
 
   .luxury-input {
-    @apply w-full border-b border-[var(--color-border)] bg-transparent px-0 py-3 text-sm outline-none transition-colors duration-300 placeholder:text-[var(--color-muted)] focus:border-luxury-gold;
+    @apply w-full rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-3.5 text-sm outline-none transition-colors duration-300 placeholder:text-[var(--color-muted)] focus:border-luxury-gold;
     color: var(--color-foreground);
   }
 
   select.luxury-input option {
     background: var(--color-surface);
     color: var(--color-foreground);
+  }
+
+  .luxury-field {
+    @apply flex min-h-[82px] w-full items-center gap-4 rounded-[1.35rem] border border-[var(--color-border)] bg-[var(--color-background)] px-4 py-3.5 shadow-[0_10px_35px_rgba(17,18,16,0.035)] transition-all duration-300 focus-within:-translate-y-0.5 focus-within:border-luxury-gold focus-within:bg-[var(--color-surface)] focus-within:shadow-[0_16px_45px_rgba(17,18,16,0.08)];
+  }
+
+  .luxury-field-icon {
+    @apply flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-luxury-gold/25 bg-luxury-gold/10 text-luxury-gold;
+  }
+
+  .luxury-field-label {
+    @apply mb-1 block text-[11px] font-semibold uppercase tracking-[0.13em] text-[var(--color-muted)];
+  }
+
+  .luxury-field-control {
+    @apply block w-full border-0 bg-transparent p-0 text-sm leading-6 text-[var(--color-foreground)] outline-none placeholder:text-[var(--color-muted)] placeholder:opacity-70 focus-visible:ring-0 focus-visible:ring-offset-0;
+  }
+
+  select.luxury-field-control option {
+    background: var(--color-surface);
+    color: var(--color-foreground);
+  }
+
+  .luxury-button-whatsapp {
+    @apply inline-flex min-h-[58px] items-center justify-center gap-3 rounded-[1.15rem] border border-luxury-black bg-luxury-black px-8 py-4 text-sm font-semibold text-luxury-white shadow-[0_15px_40px_rgba(17,18,16,0.16)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#218a54] hover:bg-[#218a54] hover:shadow-[0_18px_45px_rgba(33,138,84,0.2)];
+  }
+
+  .luxury-button-whatsapp svg {
+    @apply text-[#4ade80];
+  }
+
+  .luxury-button-whatsapp:hover svg {
+    @apply text-white;
   }
 }
 
@@ -126,13 +175,66 @@
     background-image:
       linear-gradient(to right, var(--color-border) 1px, transparent 1px),
       linear-gradient(to bottom, var(--color-border) 1px, transparent 1px);
-    background-size: 72px 72px;
+    background-size: 88px 88px;
     mask-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.68),
       transparent 88%
     );
-    opacity: 0.3;
+    opacity: 0.18;
+  }
+
+  .hero-split-bg {
+    background:
+      radial-gradient(
+        circle at 78% 28%,
+        rgba(199, 164, 106, 0.13),
+        transparent 34%
+      ),
+      linear-gradient(90deg, #100805 0%, #160c08 47%, #2d1c14 100%);
+  }
+
+  .hero-dark-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 78px 78px;
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.5),
+      transparent
+    );
+  }
+
+  .hero-word-track {
+    animation: heroWords 24s linear infinite;
+  }
+
+  .sector-marquee {
+    animation: sectorMarquee 28s linear infinite;
+  }
+
+  [dir="rtl"] .sector-marquee {
+    animation-direction: reverse;
+  }
+}
+
+@keyframes heroWords {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes sectorMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 

@@ -20,16 +20,42 @@
     "homeLabel": "Back to the home page"
   },
   "hero": {
-    "eyebrow": "Graphic Designer & Digital Marketer",
+    "eyebrow": "Design • Digital Marketing • Motion",
     "title": "Design that earns attention.",
     "titleAccent": "Marketing that creates impact.",
     "description": "I help brands build a clear, persuasive presence—from identity and design to content and digital campaigns—with considered thinking and polished execution.",
+    "typewriterLabel": "I work as a",
+    "roles": {
+      "identity": "Visual Identity Specialist",
+      "graphics": "Graphic Designer",
+      "marketing": "Digital Marketer & Media Buyer",
+      "web": "Web & Store Designer"
+    },
+    "floating": {
+      "graphic": "Graphic Design",
+      "branding": "Branding & Identity",
+      "performance": "Marketing & Performance"
+    },
+    "metrics": {
+      "metric1": {
+        "value": "4+",
+        "label": "years of design experience"
+      },
+      "metric2": {
+        "value": "3+",
+        "label": "years of marketing experience"
+      },
+      "metric3": {
+        "value": "04",
+        "label": "connected creative disciplines"
+      }
+    },
     "founder": "Ibrahim Almusabi",
     "founderRole": "Graphic Designer • Digital Marketer • Media Buyer",
     "portraitAlt": "Ibrahim Almusabi, founder of Branka",
     "badge": "Available for projects",
-    "ctaPrimary": "Explore the work",
-    "ctaSecondary": "Start a project",
+    "ctaPrimary": "View selected work",
+    "ctaSecondary": "Contact me",
     "scroll": "Continue to the Branka introduction",
     "trust": {
       "designExperience": "4+ years in design",
@@ -51,8 +77,8 @@
     "stat1Label": "Years in design",
     "stat2Value": "3+",
     "stat2Label": "Years in marketing",
-    "stat3Value": "02",
-    "stat3Label": "Complementary disciplines"
+    "stat3Value": "04",
+    "stat3Label": "Connected creative disciplines"
   },
   "services": {
     "eyebrow": "Services",
@@ -72,8 +98,8 @@
         "description": "Meta and TikTok campaign planning and management shaped by the objective and audience, with ongoing performance improvement."
       },
       "commerce": {
-        "title": "Digital Commerce",
-        "description": "Sharper storefront presence, product pages and visual assets that support a smoother customer journey and conversion."
+        "title": "Web & Store Design",
+        "description": "Clear, engaging websites and storefronts that showcase products and improve the customer journey from first visit to decision."
       }
     }
   },
@@ -85,6 +111,8 @@
     "open": "View project",
     "viewProject": "View {title}",
     "comingSoon": "Being added",
+    "viewAll": "View all work ({count})",
+    "showLess": "Show selected work only",
     "tabs": {
       "graphics": "Graphics",
       "marketing": "Marketing",
@@ -366,6 +394,68 @@
       }
     }
   },
+  "visualStory": {
+    "eyebrow": "Visual storytelling",
+    "title": "Information becomes a scene people can read and remember",
+    "description": "Infographic work rotates automatically every few seconds, showing how numbers and complex ideas become clear, engaging visual stories.",
+    "previous": "Previous work",
+    "next": "Next work",
+    "goTo": "View work number {number}",
+    "imageAlt": "Visual storytelling and infographic sample number {number}"
+  },
+  "logoShowcase": {
+    "eyebrow": "Logo design",
+    "title": "Marks that begin with an idea and live through identity",
+    "description": "A collection of Branka-designed logos across different sectors and visual styles, from Arabic lettering to geometric and corporate marks.",
+    "imageAlt": "A collection of logos designed by Branka",
+    "open": "View the logo collection",
+    "stats": {
+      "logos": {
+        "value": "8+",
+        "label": "logos on display"
+      },
+      "fields": {
+        "value": "6+",
+        "label": "diverse sectors"
+      },
+      "custom": {
+        "value": "100%",
+        "label": "custom designed"
+      }
+    }
+  },
+  "sectors": {
+    "eyebrow": "Sector experience",
+    "title": "Visual and marketing experience across diverse sectors",
+    "description": "This moving rail reflects the sectors represented in Branka's published work. It does not imply an official collaboration with a specific organization unless explicitly stated.",
+    "items": {
+      "retail": "Retail & Commerce",
+      "realEstate": "Real Estate",
+      "beauty": "Fragrance & Beauty",
+      "automotive": "Automotive",
+      "health": "Health & Care",
+      "technology": "Technology & Platforms",
+      "hospitality": "Hospitality & Events",
+      "public": "Corporate Content"
+    },
+    "promiseEyebrow": "The working experience",
+    "promiseTitle": "What can you expect when working with Branka?",
+    "promiseNote": "These are working principles, not testimonials attributed to individuals. Verified client recommendations can be added later.",
+    "promises": {
+      "clarity": {
+        "title": "Clarity from day one",
+        "description": "Objectives, scope and deliverables are defined before execution so every step is understood."
+      },
+      "consistency": {
+        "title": "Consistency in every detail",
+        "description": "Visual decisions support the identity and preserve a unified presence across channels."
+      },
+      "delivery": {
+        "title": "Organized delivery",
+        "description": "Clear review and delivery stages with direct communication through project completion."
+      }
+    }
+  },
   "contact": {
     "eyebrow": "Start a project",
     "title": "Let's build something worth noticing",
@@ -382,7 +472,14 @@
       "whatsapp": "WhatsApp",
       "email": "Email"
     },
+    "direct": {
+      "emailLabel": "Email",
+      "whatsappLabel": "Direct WhatsApp",
+      "whatsappAction": "Start a conversation"
+    },
     "form": {
+      "title": "Share your project details",
+      "description": "Complete the form and WhatsApp will open with a structured message ready to send.",
       "name": "Name",
       "namePlaceholder": "Your full name",
       "contact": "Contact details",
@@ -393,21 +490,25 @@
         "identity": "Brand identity",
         "content": "Content design",
         "performance": "Paid media",
-        "commerce": "Digital commerce",
+        "commerce": "Web and store design",
+        "motion": "Motion graphics and video",
         "other": "Another service"
       },
       "message": "Project details",
       "messagePlaceholder": "Tell us about the business, objective and expected timing...",
-      "submit": "Send by email",
+      "submit": "Send via WhatsApp",
+      "submitEmail": "Send via email",
       "copy": "Copy inquiry details",
       "emailSubject": "New Branka website inquiry from {name}",
+      "whatsappIntro": "Hello Branka, I would like to discuss a new project.",
       "summary": {
         "name": "Name",
         "contact": "Contact",
-        "service": "Service"
+        "service": "Service",
+        "message": "Project details"
       },
       "status": {
-        "opening": "Your email app will open to complete the message.",
+        "opening": "Your message is ready and WhatsApp has opened to complete sending.",
         "copied": "The inquiry details were copied. You can send them through your preferred channel.",
         "copyError": "Automatic copying failed. Please copy the details manually."
       },
@@ -423,8 +524,24 @@
     }
   },
   "footer": {
-    "tagline": "Design and marketing working together to build a clearer, more effective presence.",
+    "tagline": "I turn ideas into exceptional identities and visual experiences. Branka is a creative platform led by Ibrahim Almusabi, combining design, marketing and motion to build stronger brands.",
+    "achievements": {
+      "design": "4+ years of design experience",
+      "marketing": "3+ years of marketing experience",
+      "results": "SAR 2.5M+ in documented campaign results"
+    },
     "navigation": "Quick links",
+    "specialtiesTitle": "Specialties",
+    "specialties": {
+      "identity": "Visual identity",
+      "branding": "Branding and mark design",
+      "events": "Event and exhibition identity",
+      "environmental": "Environmental and wayfinding design",
+      "presentations": "Presentation design",
+      "marketing": "Marketing and paid campaigns",
+      "motion": "Motion and logo animation",
+      "web": "Web and store design"
+    },
     "social": "Connect",
     "signature": "Designed with intention",
     "rights": "All rights reserved.",

@@ -22,7 +22,7 @@ export function ThemeToggle({ className }: { className?: string }) {
       type="button"
       onClick={() => setTheme(isDark ? "light" : "dark")}
       className={cn(
-        "flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-foreground)] transition-all duration-300 hover:-translate-y-0.5 hover:border-luxury-gold hover:text-luxury-gold",
+        "flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-background)] text-[var(--color-foreground)] transition-all duration-300 hover:-translate-y-0.5 hover:border-luxury-gold hover:text-luxury-gold",
         className,
       )}
       aria-label={t("toggle")}
