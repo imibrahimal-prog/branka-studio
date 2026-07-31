@@ -112,8 +112,10 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="hero-title max-w-[760px] text-balance text-luxury-white"
           >
-            {t("title")}
-            <span className="mt-2 block text-luxury-gold">
+            <span className="hero-title-line text-luxury-white">
+              {t("title")}
+            </span>
+            <span className="hero-title-line mt-2 text-luxury-gold">
               {t("titleAccent")}
             </span>
           </motion.h1>
@@ -146,14 +148,14 @@ export function HeroSection() {
             className="mt-9 flex flex-col gap-3 sm:flex-row"
           >
             <Link
-              href="/#projects"
+              href="/#contact"
               className="inline-flex min-h-[54px] items-center justify-center gap-2 rounded-full bg-[#5c3928] px-8 py-3.5 text-sm font-semibold text-white shadow-[0_18px_45px_rgba(39,21,14,0.35)] transition-all duration-300 hover:-translate-y-1 hover:bg-luxury-gold hover:text-luxury-black"
             >
               {t("ctaPrimary")}
               <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" />
             </Link>
             <Link
-              href="/#contact"
+              href="/#projects"
               className="inline-flex min-h-[54px] items-center justify-center rounded-full border border-white/15 bg-white/[0.055] px-8 py-3.5 text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-luxury-gold hover:text-luxury-gold"
             >
               {t("ctaSecondary")}

@@ -89,6 +89,15 @@
     line-height: 1;
   }
 
+  .hero-title-line {
+    display: block;
+    font: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+  }
+
   .luxury-eyebrow {
     @apply text-xs font-semibold uppercase tracking-[0.2em] text-luxury-gold;
   }
@@ -157,6 +166,20 @@
   }
 }
 
+@media (max-width: 639px) {
+  [dir="rtl"] .hero-title,
+  [dir="rtl"] .hero-title-line {
+    font-size: clamp(2.3rem, 10.6vw, 3rem);
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 1.18;
+  }
+
+  [dir="rtl"] .hero-title-line + .hero-title-line {
+    margin-top: 0.35rem;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -212,7 +235,7 @@
 
   html:not(.dark) .branka-site-header {
     border-color: rgba(232, 201, 143, 0.32);
-    background: rgba(42, 25, 18, 0.96);
+    background: rgba(43, 33, 34, 0.97);
     box-shadow: 0 12px 36px rgba(42, 25, 18, 0.16);
   }
 
