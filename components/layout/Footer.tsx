@@ -86,7 +86,7 @@ export function Footer() {
   }[];
 
   return (
-    <footer className="border-t border-[var(--color-border)] bg-[var(--color-surface)]">
+    <footer className="border-t border-[var(--color-border)] bg-[#2b2022]">
       <div className="luxury-container py-14 md:py-16">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.35fr_0.65fr_0.75fr_0.75fr] lg:gap-10">
           <div className="space-y-5">

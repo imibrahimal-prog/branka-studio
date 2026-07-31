@@ -34,19 +34,20 @@ type GraphicsProject = {
   order: number;
 };
 
+// BRANKA-V16-PORTFOLIO-ORDER
 const graphicsProjects: GraphicsProject[] = [
   {
-    image: "/projects/graphics/identities/identity-5.jpg",
+    image: "/projects/graphics/identities/identity-6.jpg",
     category: "identities",
     order: 1,
   },
   {
-    image: "/projects/graphics/identities/identity-6.jpg",
+    image: "/projects/graphics/identities/identity-7.jpg",
     category: "identities",
     order: 2,
   },
   {
-    image: "/projects/graphics/social/social-9.jpg",
+    image: "/projects/graphics/social/social-10.jpg",
     category: "social",
     order: 1,
   },
@@ -66,14 +67,19 @@ const graphicsProjects: GraphicsProject[] = [
     order: 1,
   },
   {
-    image: "/projects/graphics/identities/identity-7.jpg",
+    image: "/projects/graphics/identities/identity-5.jpg",
     category: "identities",
     order: 3,
   },
-  ...Array.from({ length: 9 }, (_, index) => ({
-    image: `/projects/graphics/social/social-${index + 10}.jpg`,
+  {
+    image: "/projects/graphics/social/social-9.jpg",
+    category: "social",
+    order: 2,
+  },
+  ...Array.from({ length: 8 }, (_, index) => ({
+    image: `/projects/graphics/social/social-${index + 11}.jpg`,
     category: "social" as const,
-    order: index + 2,
+    order: index + 3,
   })),
   ...Array.from({ length: 2 }, (_, index) => ({
     image: `/projects/graphics/infographics/infographic-${index + 21}.jpg`,

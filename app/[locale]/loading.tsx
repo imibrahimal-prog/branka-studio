@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function LocaleLoading() {
   return (
     <div
-      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#2b2122]"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#2b2022]"
       role="status"
       aria-label="Branka — Ibrahim Almusabi"
     >

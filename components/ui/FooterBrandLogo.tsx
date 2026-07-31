@@ -9,7 +9,7 @@ export function FooterBrandLogo({ className }: FooterBrandLogoProps) {
   return (
     <span
       className={cn(
-        "relative block h-[190px] w-[260px] max-w-full overflow-hidden rounded-[1.4rem] bg-[#2b2122]",
+        "relative block h-[190px] w-[260px] max-w-full overflow-hidden rounded-[1.4rem] bg-[#2b2022]",
         className,
       )}
     >
