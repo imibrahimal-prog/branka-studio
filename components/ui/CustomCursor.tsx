@@ -58,13 +58,13 @@ export function CustomCursor() {
             ? "rgba(199,164,106,0.95)"
             : "rgba(199,164,106,0.58)",
         }}
-        className="pointer-events-none fixed start-0 top-0 z-[90] h-[38px] w-[38px] rounded-full border"
+        className="pointer-events-none fixed left-0 top-0 z-[90] h-[38px] w-[38px] rounded-full border"
         aria-hidden="true"
       />
       <motion.div
         style={{ x: dotX, y: dotY }}
         animate={{ scale: interactive ? 0.5 : 1 }}
-        className="pointer-events-none fixed start-0 top-0 z-[91] h-1.5 w-1.5 rounded-full bg-luxury-gold"
+        className="pointer-events-none fixed left-0 top-0 z-[91] h-1.5 w-1.5 rounded-full bg-luxury-gold"
         aria-hidden="true"
       />
     </>

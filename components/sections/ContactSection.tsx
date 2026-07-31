@@ -34,7 +34,7 @@ export function ContactSection() {
   const t = useTranslations("contact");
   const [status, setStatus] = useState<FormStatus>("idle");
   const contactEmail =
-    process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "im.ibrahim.al@gmail.com";
+    process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "info@braanka.com";
   const instagramUrl =
     process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? "https://www.instagram.com/i_dd_m";
   const xUrl = process.env.NEXT_PUBLIC_X_URL ?? "https://x.com/i_dd_m";

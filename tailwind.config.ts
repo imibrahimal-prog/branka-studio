@@ -11,9 +11,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        white: "#fef3e4",
         luxury: {
           black: "#090909",
-          white: "#F8F8F6",
+          white: "#fef3e4",
           gold: "#C7A46A",
           "gold-light": "#D4B88A",
           "gold-dark": "#A8884F",

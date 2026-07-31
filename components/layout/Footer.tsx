@@ -11,7 +11,7 @@ import {
   Twitter,
 } from "lucide-react";
 import { LocaleSwitcher } from "@/components/ui/LocaleSwitcher";
-import { BrandLogo } from "@/components/ui/BrandLogo";
+import { FooterBrandLogo } from "@/components/ui/FooterBrandLogo";
 
 const footerLinks = [
   { href: "/#about", key: "about" as const },
@@ -40,7 +40,7 @@ export function Footer() {
     process.env.NEXT_PUBLIC_LINKEDIN_URL ??
     "https://www.linkedin.com/in/ibrahim-ds";
   const contactEmail =
-    process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "im.ibrahim.al@gmail.com";
+    process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "info@braanka.com";
   const whatsappUrl =
     process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "https://wa.me/966502757844";
   const socialLinks = [
@@ -91,7 +91,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.35fr_0.65fr_0.75fr_0.75fr] lg:gap-10">
           <div className="space-y-5">
             <Link href="/" className="inline-flex">
-              <BrandLogo />
+              <FooterBrandLogo />
             </Link>
             <p className="max-w-xl text-sm leading-7 text-[var(--color-muted)] md:text-base">
               {t("tagline")}
@@ -164,7 +164,7 @@ export function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-4 text-xs uppercase tracking-widest text-[var(--color-muted)] sm:flex-row">
           <p>
-            &copy; {year} Branka Studio. {t("rights")}
+            &copy; {year} Branka. {t("rights")}
           </p>
           <button
             type="button"

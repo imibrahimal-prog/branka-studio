@@ -18,9 +18,9 @@
     --color-background: #120b08;
     --color-surface: #1b110d;
     --color-surface-raised: #2a1912;
-    --color-foreground: #f8f2ed;
+    --color-foreground: #fef3e4;
     --color-muted: #b6a79d;
-    --color-border: rgba(248, 242, 237, 0.12);
+    --color-border: rgba(254, 243, 228, 0.12);
     --color-gold: #c49a67;
     color-scheme: dark;
   }
@@ -210,8 +210,8 @@
 
   .hero-dark-grid {
     background-image:
-      linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      linear-gradient(rgba(254, 243, 228, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(254, 243, 228, 0.035) 1px, transparent 1px);
     background-size: 78px 78px;
     mask-image: linear-gradient(
       to right,

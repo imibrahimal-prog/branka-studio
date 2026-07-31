@@ -50,9 +50,9 @@ export async function generateMetadata({ params }: Props) {
       siteName: t("brand"),
     },
     icons: {
-      icon: "/icons/branka-mark.png",
-      shortcut: "/icons/branka-mark.png",
-      apple: "/icons/branka-mark.png",
+      icon: "/icons/branka-favicon-v15.png",
+      shortcut: "/icons/branka-favicon-v15.png",
+      apple: "/icons/branka-favicon-v15.png",
     },
   };
 }
