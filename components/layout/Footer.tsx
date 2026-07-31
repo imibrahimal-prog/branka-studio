@@ -90,8 +90,11 @@ export function Footer() {
       <div className="luxury-container py-14 md:py-16">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.35fr_0.65fr_0.75fr_0.75fr] lg:gap-10">
           <div className="space-y-5">
-            <Link href="/" className="inline-flex">
-              <FooterBrandLogo />
+            <Link
+              href="/"
+              className="!flex !w-full !justify-center lg:!justify-start"
+            >
+              <FooterBrandLogo className="!mx-auto lg:!mx-0" />
             </Link>
             <p className="max-w-xl text-sm leading-7 text-[var(--color-muted)] md:text-base">
               {t("tagline")}
