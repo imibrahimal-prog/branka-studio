@@ -53,31 +53,61 @@ function useTypewriter(items: string[]) {
   return text;
 }
 
+function TypewriterText({ items }: { items: string[] }) {
+  const text = useTypewriter(items);
+  return <>{text}</>;
+}
+
+function useLiteHeroEffects() {
+  const [enabled, setEnabled] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 900px), (pointer: coarse)");
+    const syncEnabled = () => setEnabled(media.matches);
+
+    syncEnabled();
+    media.addEventListener("change", syncEnabled);
+    return () => media.removeEventListener("change", syncEnabled);
+  }, []);
+
+  return enabled;
+}
+
 export function HeroSection() {
   const t = useTranslations("hero");
   const roles = useMemo(() => roleKeys.map((key) => t(`roles.${key}`)), [t]);
-  const typedRole = useTypewriter(roles);
+  const reduceMotion = useReducedMotion();
+  const liteEffects = useLiteHeroEffects();
+  const pauseAmbientMotion = Boolean(reduceMotion || liteEffects);
 
   return (
     <section className="branka-hero relative overflow-hidden pt-[72px] text-luxury-white md:pt-[84px]">
       <div className="hero-split-bg absolute inset-0" aria-hidden="true" />
       <div className="hero-dark-grid absolute inset-y-0 left-0 w-[56%]" />
       <motion.div
-        animate={{
-          x: [0, 55, -25, 0],
-          y: [0, -35, 30, 0],
-          scale: [1, 1.08, 0.96, 1],
-        }}
+        animate={
+          pauseAmbientMotion
+            ? undefined
+            : {
+                x: [0, 55, -25, 0],
+                y: [0, -35, 30, 0],
+                scale: [1, 1.08, 0.96, 1],
+              }
+        }
         transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
         className="pointer-events-none absolute -start-32 top-20 h-[32rem] w-[32rem] rounded-full bg-[#704a35]/25 blur-[120px]"
         aria-hidden="true"
       />
       <motion.div
-        animate={{
-          x: [0, -45, 35, 0],
-          y: [0, 45, -20, 0],
-          scale: [1, 0.94, 1.1, 1],
-        }}
+        animate={
+          pauseAmbientMotion
+            ? undefined
+            : {
+                x: [0, -45, 35, 0],
+                y: [0, 45, -20, 0],
+                scale: [1, 0.94, 1.1, 1],
+              }
+        }
         transition={{ duration: 21, repeat: Infinity, ease: "easeInOut" }}
         className="pointer-events-none absolute -end-28 bottom-4 h-[34rem] w-[34rem] rounded-full bg-luxury-gold/15 blur-[130px]"
         aria-hidden="true"
@@ -128,7 +158,9 @@ export function HeroSection() {
             aria-live="polite"
           >
             <span>{t("typewriterLabel")}</span>
-            <span className="text-luxury-gold">{typedRole}</span>
+            <span className="text-luxury-gold">
+              <TypewriterText items={roles} />
+            </span>
             <span className="h-5 w-px animate-pulse bg-luxury-gold" />
           </motion.div>
 
@@ -186,8 +218,8 @@ export function HeroSection() {
               className="absolute inset-4 rounded-full border border-white/10"
               aria-hidden="true"
             >
-              <span className="absolute start-[12%] top-[8%] h-3 w-3 rounded-full border-2 border-[#21140e] bg-luxury-gold shadow-lg" />
-              <span className="absolute bottom-[8%] end-[13%] h-2.5 w-2.5 rounded-full border-2 border-[#21140e] bg-luxury-gold shadow-lg" />
+              <span className="absolute left-1/2 top-0 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#21140e] bg-luxury-gold shadow-lg" />
+              <span className="absolute bottom-0 left-1/2 h-2.5 w-2.5 -translate-x-1/2 translate-y-1/2 rounded-full border-2 border-[#21140e] bg-luxury-gold shadow-lg" />
             </motion.div>
             <div className="absolute inset-9 overflow-hidden rounded-full border-[7px] border-[#2e1d15] bg-luxury-black shadow-[0_35px_100px_rgba(0,0,0,0.45)] ring-1 ring-luxury-gold/35">
               <Image
@@ -205,7 +237,11 @@ export function HeroSection() {
           {floatingKeys.map((key, index) => (
             <motion.span
               key={key}
-              animate={{ y: [0, index % 2 === 0 ? -8 : 8, 0] }}
+              animate={
+                pauseAmbientMotion
+                  ? undefined
+                  : { y: [0, index % 2 === 0 ? -8 : 8, 0] }
+              }
               transition={{
                 duration: 4 + index * 0.7,
                 repeat: Infinity,
@@ -224,7 +260,7 @@ export function HeroSection() {
           ))}
 
           <motion.div
-            animate={{ y: [0, 6, 0] }}
+            animate={pauseAmbientMotion ? undefined : { y: [0, 6, 0] }}
             transition={{ duration: 4.6, repeat: Infinity, ease: "easeInOut" }}
             className="absolute -bottom-5 end-3 max-w-[285px] rounded-[1.35rem] border border-white/10 bg-[#170f0b]/92 px-5 py-4 shadow-[0_18px_55px_rgba(0,0,0,0.36)] backdrop-blur-md"
           >
