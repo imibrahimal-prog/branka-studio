@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --color-background: #ffe2d9;
-    --color-surface: #ffe2d9;
+    --color-background: #FFFBF0;
+    --color-surface: #FFFBF0;
     --color-surface-raised: #efcfc4;
     --color-foreground: #21140e;
     --color-muted: #75645b;
