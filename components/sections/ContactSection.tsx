@@ -306,7 +306,7 @@ export function ContactSection() {
 
               <div>
                 <label
-                  htmlFor="contact"
+                  htmlFor="contact-details"
                   className={cn(
                     "luxury-field",
                     errors.contact && "border-red-500",
@@ -320,7 +320,7 @@ export function ContactSection() {
                       {t("form.contact")}
                     </span>
                     <input
-                      id="contact"
+                      id="contact-details"
                       type="text"
                       autoComplete="email"
                       placeholder={t("form.contactPlaceholder")}

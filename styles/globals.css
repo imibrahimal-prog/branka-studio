@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --color-background: #FFFBF0;
-    --color-surface: #FFFBF0;
+    --color-background: #fffbf0;
+    --color-surface: #fffbf0;
     --color-surface-raised: #efcfc4;
     --color-foreground: #21140e;
     --color-muted: #75645b;
@@ -27,6 +27,10 @@
 
   html {
     scroll-padding-top: 80px;
+  }
+
+  html:not(.lenis) {
+    scroll-behavior: smooth;
   }
 
   body {
@@ -163,6 +167,32 @@
 
   .branka-back-to-top {
     @apply inline-flex h-14 w-14 items-center justify-center rounded-full border border-luxury-gold bg-luxury-gold text-[#2a1912] shadow-[0_16px_40px_rgba(42,25,18,0.2)] transition-all duration-300 hover:-translate-y-1 hover:bg-luxury-gold-light;
+  }
+
+  .branka-reveal-item {
+    opacity: 0;
+    translate: 0 22px;
+    transition:
+      opacity 560ms cubic-bezier(0.22, 1, 0.36, 1),
+      translate 650ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--branka-reveal-delay, 0ms);
+  }
+
+  .branka-reveal-item.branka-reveal-visible {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .branka-reveal-item {
+    opacity: 1;
+    translate: none;
+    transition: none;
   }
 }
 

@@ -75,10 +75,10 @@ function PatternSide({ side, reduceMotion }: PatternSideProps) {
               repeat: Number.POSITIVE_INFINITY,
             }
       }
-      className={`pointer-events-none absolute top-1/2 h-[108vh] w-[58vw] min-w-[260px] max-w-[560px] -translate-y-1/2 sm:w-[42vw] lg:w-[34vw] ${
+      className={`pointer-events-none absolute top-1/2 h-[48dvh] min-h-[430px] w-auto max-w-none -translate-y-1/2 aspect-[960/1637] sm:h-[58dvh] lg:h-[70dvh] lg:max-h-[760px] ${
         isLeft
-          ? "-left-[34vw] sm:-left-[19vw] lg:-left-[10vw]"
-          : "-right-[34vw] sm:-right-[19vw] lg:-right-[10vw]"
+          ? "-left-[33vw] sm:-left-[18vw] lg:-left-[9vw]"
+          : "-right-[33vw] sm:-right-[18vw] lg:-right-[9vw]"
       }`}
     >
       <Image
@@ -87,7 +87,7 @@ function PatternSide({ side, reduceMotion }: PatternSideProps) {
         fill
         priority
         unoptimized
-        sizes="(max-width: 640px) 58vw, (max-width: 1024px) 42vw, 34vw"
+        sizes="(max-width: 640px) 48vh, (max-width: 1024px) 58vh, 70vh"
         className={`object-contain ${isLeft ? "" : "-scale-x-100"}`}
       />
       <PatternShine side={side} reduceMotion={reduceMotion} />
@@ -115,7 +115,7 @@ export function InitialLoader() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: reduceMotion ? 0.12 : 0.5 }}
-          className="fixed inset-0 z-[100] flex items-center justify-center overflow-hidden bg-[#2b2122]"
+          className="fixed inset-0 z-[100] flex h-[100dvh] items-center justify-center overflow-hidden bg-[#2b2022]"
           aria-label="Branka — Ibrahim Almusabi"
           aria-live="polite"
           role="status"
@@ -132,7 +132,7 @@ export function InitialLoader() {
             initial={reduceMotion ? undefined : { opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-            className="relative z-10 flex flex-col items-center"
+            className="relative z-10 flex -translate-y-[1.5dvh] flex-col items-center"
           >
             <Image
               src="/images/branka-loading-logo.png"
@@ -141,11 +141,11 @@ export function InitialLoader() {
               height={1536}
               priority
               unoptimized
-              sizes="(max-width: 640px) 82vw, 470px"
-              className="h-auto w-[82vw] max-w-[470px] select-none object-contain"
+              sizes="(max-width: 640px) 58vw, 460px"
+              className="h-auto w-[58vw] max-w-[460px] select-none object-contain sm:w-[48vw]"
             />
 
-            <span className="relative mt-4 h-[2px] w-44 overflow-hidden rounded-full bg-[#ffdf9a]/20 sm:mt-5 sm:w-56">
+            <span className="relative -mt-[5.5dvh] h-[2px] w-32 overflow-hidden rounded-full bg-[#ffdf9a]/20 sm:-mt-10 sm:w-44 lg:w-52">
               <motion.span
                 initial={{ x: "-120%" }}
                 animate={{ x: reduceMotion ? "0%" : ["-120%", "350%"] }}
