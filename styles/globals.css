@@ -18,9 +18,9 @@
     --color-background: #120b08;
     --color-surface: #1b110d;
     --color-surface-raised: #2a1912;
-    --color-foreground: #f8f2ed;
+    --color-foreground: #fef3e4;
     --color-muted: #b6a79d;
-    --color-border: rgba(248, 242, 237, 0.12);
+    --color-border: rgba(254, 243, 228, 0.12);
     --color-gold: #c49a67;
     color-scheme: dark;
   }
@@ -37,7 +37,6 @@
       Inter, "Segoe UI", "IBM Plex Sans Arabic", Tahoma, Arial, sans-serif;
     font-size: 16px;
     text-rendering: optimizeLegibility;
-    overflow-x: clip;
   }
 
   [dir="rtl"] body {
@@ -211,8 +210,8 @@
 
   .hero-dark-grid {
     background-image:
-      linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      linear-gradient(rgba(254, 243, 228, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(254, 243, 228, 0.035) 1px, transparent 1px);
     background-size: 78px 78px;
     mask-image: linear-gradient(
       to right,
@@ -225,37 +224,7 @@
   .hero-word-track {
     animation: heroWords 24s linear infinite;
     backface-visibility: hidden;
-    direction: ltr;
-    transform: translate3d(0, 0, 0);
     will-change: transform;
-  }
-
-  .hero-orbit {
-    transform-origin: 50% 50%;
-    backface-visibility: hidden;
-    will-change: transform;
-  }
-
-  .hero-orbit-dot {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    display: block;
-    border: 2px solid #21140e;
-    border-radius: 9999px;
-    background: #c7a46a;
-    box-shadow: 0 5px 18px rgba(199, 164, 106, 0.42);
-    transform: translate3d(-50%, -50%, 0);
-  }
-
-  .hero-orbit-dot-outer {
-    width: 0.75rem;
-    height: 0.75rem;
-  }
-
-  .hero-orbit-dot-inner {
-    width: 0.625rem;
-    height: 0.625rem;
   }
 
   .sector-marquee {
@@ -270,7 +239,7 @@
 
   html:not(.dark) .branka-site-header {
     border-color: rgba(232, 201, 143, 0.32);
-    background: rgba(42, 25, 18, 0.96);
+    background: rgba(43, 33, 34, 0.97);
     box-shadow: 0 12px 36px rgba(42, 25, 18, 0.16);
   }
 
