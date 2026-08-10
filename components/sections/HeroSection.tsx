@@ -64,7 +64,7 @@ export function HeroSection() {
   const pauseAmbientMotion = true;
 
   return (
-    <section className="branka-hero relative overflow-hidden pt-[72px] text-luxury-white md:pt-[84px]">
+    <section className="branka-hero relative overflow-x-clip overflow-y-hidden pt-[72px] text-luxury-white md:pt-[84px]">
       <div className="hero-split-bg absolute inset-0" aria-hidden="true" />
       <div className="hero-dark-grid absolute inset-y-0 left-0 w-[56%]" />
       <motion.div
@@ -97,14 +97,16 @@ export function HeroSection() {
       />
 
       <div className="pointer-events-none absolute inset-x-0 top-[46%] overflow-hidden opacity-[0.055]">
-        <div className="hero-word-track whitespace-nowrap font-display text-[clamp(5rem,13vw,12rem)] font-black uppercase tracking-[-0.06em]">
-          GRAPHIC DESIGN · BRANDING · MOTION · GRAPHIC DESIGN · BRANDING ·
-          MOTION ·
+        <div className="hero-word-track flex w-max whitespace-nowrap font-display text-[clamp(5rem,13vw,12rem)] font-black uppercase tracking-[-0.06em]">
+          <span>GRAPHIC DESIGN · BRANDING · MOTION ·&nbsp;</span>
+          <span aria-hidden="true">
+            GRAPHIC DESIGN · BRANDING · MOTION ·&nbsp;
+          </span>
         </div>
       </div>
 
-      <div className="luxury-container relative z-10 grid min-h-[760px] items-center gap-16 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20 lg:py-20">
-        <div>
+      <div className="luxury-container relative z-10 grid min-h-[760px] items-center gap-16 py-14 xl:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] xl:gap-20 xl:py-20">
+        <div className="min-w-0">
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
@@ -123,7 +125,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 26 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="hero-title max-w-[760px] text-balance text-luxury-white"
+            className="hero-title min-w-0 max-w-[760px] text-balance text-luxury-white"
           >
             <span className="hero-title-line text-luxury-white">
               {t("title")}
@@ -163,14 +165,14 @@ export function HeroSection() {
             className="mt-9 flex flex-col gap-3 sm:flex-row"
           >
             <Link
-              href="/#contact"
+              href="/#projects"
               className="inline-flex min-h-[54px] items-center justify-center gap-2 rounded-full bg-[#5c3928] px-8 py-3.5 text-sm font-semibold text-white shadow-[0_18px_45px_rgba(39,21,14,0.35)] transition-all duration-300 hover:-translate-y-1 hover:bg-luxury-gold hover:text-luxury-black"
             >
               {t("ctaPrimary")}
               <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" />
             </Link>
             <Link
-              href="/#projects"
+              href="/#contact"
               className="inline-flex min-h-[54px] items-center justify-center rounded-full border border-white/15 bg-white/[0.055] px-8 py-3.5 text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-luxury-gold hover:text-luxury-gold"
             >
               {t("ctaSecondary")}
@@ -182,7 +184,7 @@ export function HeroSection() {
           initial={{ opacity: 0, scale: 0.96, y: 18 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mx-auto w-full max-w-[520px] lg:mx-0 lg:justify-self-end"
+          className="relative mx-auto w-full max-w-[520px] xl:mx-0 xl:justify-self-end"
         >
           <div
             className="absolute inset-[11%] rounded-full bg-luxury-gold/20 blur-[75px]"
@@ -192,17 +194,18 @@ export function HeroSection() {
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-0 rounded-full border border-dashed border-luxury-gold/38"
+              className="hero-orbit absolute inset-0 rounded-full border border-dashed border-luxury-gold/38"
               aria-hidden="true"
-            />
+            >
+              <span className="hero-orbit-dot hero-orbit-dot-outer" />
+            </motion.div>
             <motion.div
               animate={{ rotate: -360 }}
               transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-4 rounded-full border border-white/10"
+              className="hero-orbit absolute inset-4 rounded-full border border-white/10"
               aria-hidden="true"
             >
-              <span className="absolute left-1/2 top-0 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#21140e] bg-luxury-gold shadow-lg" />
-              <span className="absolute bottom-0 left-1/2 h-2.5 w-2.5 -translate-x-1/2 translate-y-1/2 rounded-full border-2 border-[#21140e] bg-luxury-gold shadow-lg" />
+              <span className="hero-orbit-dot hero-orbit-dot-inner" />
             </motion.div>
             <div className="absolute inset-9 overflow-hidden rounded-full border-[7px] border-[#2e1d15] bg-luxury-black shadow-[0_35px_100px_rgba(0,0,0,0.45)] ring-1 ring-luxury-gold/35">
               <Image
