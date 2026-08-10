@@ -54,44 +54,48 @@ function PatternSide({ side, reduceMotion }: PatternSideProps) {
   const isLeft = side === "left";
 
   return (
-    <motion.div
+    <div
       aria-hidden="true"
-      initial={reduceMotion ? undefined : { opacity: 0 }}
-      animate={
-        reduceMotion
-          ? { opacity: 0.36 }
-          : {
-              opacity: [0.24, 0.5, 0.24],
-              x: isLeft ? [0, 14, 0] : [0, -14, 0],
-              scale: [0.985, 1.02, 0.985],
-            }
-      }
-      transition={
-        reduceMotion
-          ? { duration: 0 }
-          : {
-              duration: 7,
-              ease: "easeInOut",
-              repeat: Number.POSITIVE_INFINITY,
-            }
-      }
-      className={`pointer-events-none absolute top-1/2 h-[48dvh] min-h-[430px] w-auto max-w-none -translate-y-1/2 aspect-[960/1637] sm:h-[58dvh] lg:h-[70dvh] lg:max-h-[760px] ${
+      className={`pointer-events-none absolute top-1/2 h-[62dvh] min-h-[500px] w-auto max-w-none -translate-y-1/2 aspect-[960/1637] sm:h-[74dvh] lg:h-[88dvh] lg:max-h-[940px] ${
         isLeft
-          ? "-left-[33vw] sm:-left-[18vw] lg:-left-[9vw]"
-          : "-right-[33vw] sm:-right-[18vw] lg:-right-[9vw]"
+          ? "-left-[34vw] sm:-left-[16vw] lg:-left-[7vw]"
+          : "-right-[34vw] sm:-right-[16vw] lg:-right-[7vw]"
       }`}
     >
-      <Image
-        src="/images/branka-loader-pattern.png"
-        alt=""
-        fill
-        priority
-        unoptimized
-        sizes="(max-width: 640px) 48vh, (max-width: 1024px) 58vh, 70vh"
-        className={`object-contain ${isLeft ? "" : "-scale-x-100"}`}
-      />
-      <PatternShine side={side} reduceMotion={reduceMotion} />
-    </motion.div>
+      <motion.div
+        initial={reduceMotion ? undefined : { opacity: 0 }}
+        animate={
+          reduceMotion
+            ? { opacity: 0.36 }
+            : {
+                opacity: [0.24, 0.5, 0.24],
+                x: isLeft ? [0, 14, 0] : [0, -14, 0],
+                scale: [0.985, 1.02, 0.985],
+              }
+        }
+        transition={
+          reduceMotion
+            ? { duration: 0 }
+            : {
+                duration: 7,
+                ease: "easeInOut",
+                repeat: Number.POSITIVE_INFINITY,
+              }
+        }
+        className="relative h-full w-full origin-center"
+      >
+        <Image
+          src="/images/branka-loader-pattern.png"
+          alt=""
+          fill
+          priority
+          unoptimized
+          sizes="(max-width: 640px) 62vh, (max-width: 1024px) 74vh, 88vh"
+          className={`object-contain ${isLeft ? "" : "-scale-x-100"}`}
+        />
+        <PatternShine side={side} reduceMotion={reduceMotion} />
+      </motion.div>
+    </div>
   );
 }
 
@@ -134,16 +138,22 @@ export function InitialLoader() {
             transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
             className="relative z-10 flex -translate-y-[1.5dvh] flex-col items-center"
           >
-            <Image
-              src="/images/branka-loading-logo.png"
-              alt="برانكا — إبراهيم المصعبي"
-              width={1278}
-              height={1536}
-              priority
-              unoptimized
-              sizes="(max-width: 640px) 58vw, 460px"
-              className="h-auto w-[58vw] max-w-[460px] select-none object-contain sm:w-[48vw]"
-            />
+            <div className="relative w-[58vw] max-w-[460px] sm:w-[48vw]">
+              <Image
+                src="/images/branka-loading-logo.png"
+                alt="برانكا — إبراهيم المصعبي"
+                width={1278}
+                height={1536}
+                priority
+                unoptimized
+                sizes="(max-width: 640px) 58vw, 460px"
+                className="h-auto w-full select-none object-contain"
+              />
+              <span
+                aria-hidden="true"
+                className="branka-loader-logo-shine absolute inset-0"
+              />
+            </div>
 
             <span className="relative -mt-[5.5dvh] h-[2px] w-32 overflow-hidden rounded-full bg-[#ffdf9a]/20 sm:-mt-10 sm:w-44 lg:w-52">
               <motion.span

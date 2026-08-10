@@ -14,8 +14,8 @@ export default function LocaleLoading() {
         height={1637}
         priority
         unoptimized
-        sizes="(max-width: 640px) 48vh, (max-width: 1024px) 58vh, 70vh"
-        className="pointer-events-none absolute -left-[33vw] top-1/2 h-[48dvh] w-auto min-h-[430px] max-w-none -translate-y-1/2 object-contain opacity-40 sm:-left-[18vw] sm:h-[58dvh] lg:-left-[9vw] lg:h-[70dvh] lg:max-h-[760px]"
+        sizes="(max-width: 640px) 62vh, (max-width: 1024px) 74vh, 88vh"
+        className="pointer-events-none absolute -left-[34vw] top-1/2 h-[62dvh] w-auto min-h-[500px] max-w-none -translate-y-1/2 object-contain opacity-40 sm:-left-[16vw] sm:h-[74dvh] lg:-left-[7vw] lg:h-[88dvh] lg:max-h-[940px]"
       />
       <Image
         src="/images/branka-loader-pattern.png"
@@ -24,21 +24,27 @@ export default function LocaleLoading() {
         height={1637}
         priority
         unoptimized
-        sizes="(max-width: 640px) 48vh, (max-width: 1024px) 58vh, 70vh"
-        className="pointer-events-none absolute -right-[33vw] top-1/2 h-[48dvh] w-auto min-h-[430px] max-w-none -translate-y-1/2 -scale-x-100 object-contain opacity-40 sm:-right-[18vw] sm:h-[58dvh] lg:-right-[9vw] lg:h-[70dvh] lg:max-h-[760px]"
+        sizes="(max-width: 640px) 62vh, (max-width: 1024px) 74vh, 88vh"
+        className="pointer-events-none absolute -right-[34vw] top-1/2 h-[62dvh] w-auto min-h-[500px] max-w-none -translate-y-1/2 -scale-x-100 object-contain opacity-40 sm:-right-[16vw] sm:h-[74dvh] lg:-right-[7vw] lg:h-[88dvh] lg:max-h-[940px]"
       />
 
       <div className="relative z-10 flex -translate-y-[1.5dvh] flex-col items-center">
-        <Image
-          src="/images/branka-loading-logo.png"
-          alt="برانكا — إبراهيم المصعبي"
-          width={1278}
-          height={1536}
-          priority
-          unoptimized
-          sizes="(max-width: 640px) 58vw, 460px"
-          className="h-auto w-[58vw] max-w-[460px] object-contain sm:w-[48vw]"
-        />
+        <div className="relative w-[58vw] max-w-[460px] sm:w-[48vw]">
+          <Image
+            src="/images/branka-loading-logo.png"
+            alt="برانكا — إبراهيم المصعبي"
+            width={1278}
+            height={1536}
+            priority
+            unoptimized
+            sizes="(max-width: 640px) 58vw, 460px"
+            className="h-auto w-full object-contain"
+          />
+          <span
+            aria-hidden="true"
+            className="branka-loader-logo-shine absolute inset-0"
+          />
+        </div>
         <span className="-mt-[5.5dvh] h-[2px] w-32 animate-pulse rounded-full bg-[#ffdf9a] shadow-[0_0_16px_rgba(255,223,154,0.7)] sm:-mt-10 sm:w-44 lg:w-52" />
       </div>
     </div>

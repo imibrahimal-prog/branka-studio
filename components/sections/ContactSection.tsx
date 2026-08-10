@@ -43,6 +43,7 @@ export function ContactSection() {
     "https://www.linkedin.com/in/ibrahim-ds";
   const whatsappUrl =
     process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "https://wa.me/966502757844";
+  const whatsappPhone = "+966 50 275 78 44";
 
   const contactFormSchema = z.object({
     name: z
@@ -186,6 +187,12 @@ export function ContactSection() {
                 </span>
                 <span className="mt-2 block font-display text-lg font-semibold md:text-xl">
                   {t("direct.whatsappAction")}
+                </span>
+                <span
+                  dir="ltr"
+                  className="mt-2 block whitespace-nowrap font-display text-base font-bold tracking-[0.08em] text-[#ffdf9a] md:text-lg"
+                >
+                  {whatsappPhone}
                 </span>
               </span>
             </span>
