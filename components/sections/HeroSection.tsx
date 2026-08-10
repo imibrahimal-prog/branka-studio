@@ -58,27 +58,10 @@ function TypewriterText({ items }: { items: string[] }) {
   return <>{text}</>;
 }
 
-function useLiteHeroEffects() {
-  const [enabled, setEnabled] = useState(false);
-
-  useEffect(() => {
-    const media = window.matchMedia("(max-width: 900px), (pointer: coarse)");
-    const syncEnabled = () => setEnabled(media.matches);
-
-    syncEnabled();
-    media.addEventListener("change", syncEnabled);
-    return () => media.removeEventListener("change", syncEnabled);
-  }, []);
-
-  return enabled;
-}
-
 export function HeroSection() {
   const t = useTranslations("hero");
   const roles = useMemo(() => roleKeys.map((key) => t(`roles.${key}`)), [t]);
-  const reduceMotion = useReducedMotion();
-  const liteEffects = useLiteHeroEffects();
-  const pauseAmbientMotion = Boolean(reduceMotion || liteEffects);
+  const pauseAmbientMotion = true;
 
   return (
     <section className="branka-hero relative overflow-hidden pt-[72px] text-luxury-white md:pt-[84px]">
