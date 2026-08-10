@@ -2,15 +2,15 @@
   "metadata": {
     "brand": "Branka",
     "title": "Branka | Graphic Design & Digital Marketing",
-    "description": "Branka is a creative platform led by Ibrahim Almusabi, offering brand identity, content design, paid media and digital commerce experiences.",
-    "keywords": "graphic designer, digital marketer, media buyer, brand identity, social media design, paid media, Branka"
+    "description": "Branka is an integrated creative studio specializing in brand identity, content design, paid media and digital commerce experiences.",
+    "keywords": "graphic design company, digital marketing company, creative studio, brand identity, social media design, paid media management, e-commerce design, Branka"
   },
   "navigation": {
     "label": "Main navigation",
     "home": "Home",
     "about": "About",
     "services": "Services",
-    "projects": "Work",
+    "projects": "Our work",
     "contact": "Contact",
     "menuOpen": "Open menu",
     "menuClose": "Close menu"
@@ -23,13 +23,13 @@
     "eyebrow": "Design • Digital Marketing • Motion",
     "title": "Design that earns attention.",
     "titleAccent": "Marketing that creates impact.",
-    "description": "I help brands build a clear, persuasive presence—from identity and design to content and digital campaigns—with considered thinking and polished execution.",
-    "typewriterLabel": "I work as a",
+    "description": "We help brands build a clear, persuasive presence—from identity and design to content and digital campaigns—with considered thinking and polished execution.",
+    "typewriterLabel": "We specialize in",
     "roles": {
-      "identity": "Visual Identity Specialist",
-      "graphics": "Graphic Designer",
-      "marketing": "Digital Marketer & Media Buyer",
-      "web": "Web & Store Designer"
+      "identity": "Brand identity",
+      "graphics": "Graphic design",
+      "marketing": "Digital marketing & media buying",
+      "web": "E-commerce & web design"
     },
     "floating": {
       "graphic": "Graphic Design",
@@ -53,9 +53,9 @@
     "founder": "Ibrahim Almusabi",
     "founderRole": "Graphic Designer • Digital Marketer • Media Buyer",
     "portraitAlt": "Ibrahim Almusabi, founder of Branka",
-    "badge": "Available for projects",
-    "ctaPrimary": "View selected work",
-    "ctaSecondary": "Contact me",
+    "badge": "Available for new projects",
+    "ctaPrimary": "View our best work",
+    "ctaSecondary": "Contact us",
     "scroll": "Continue to the Branka introduction",
     "trust": {
       "designExperience": "5+ years in design",
@@ -66,8 +66,8 @@
   "about": {
     "eyebrow": "About Branka",
     "title": "Turning ideas into a presence that is hard to ignore",
-    "descriptionPrimary": "Branka is a creative practice that connects visual thinking with marketing understanding, led by Ibrahim Almusabi to create work that looks strong and serves a clear purpose.",
-    "descriptionSecondary": "I approach each project as one connected system: understand the audience, sharpen the message, then build a visual direction that helps the brand show up with confidence and communicate effectively.",
+    "descriptionPrimary": "Branka is a creative studio that connects visual thinking with marketing understanding, with our specialized team creating work that looks strong and serves a clear purpose.",
+    "descriptionSecondary": "We approach each project as one connected system: understand the audience, sharpen the message, then build a visual direction that helps the brand show up with confidence and communicate effectively.",
     "focus": {
       "clarity": "Clear thinking",
       "craft": "Attention to detail",
@@ -104,8 +104,8 @@
     }
   },
   "projects": {
-    "eyebrow": "Selected work",
-    "title": "Work organized by discipline",
+    "eyebrow": "Our work",
+    "title": "Our work, organized by discipline",
     "description": "Explore the complete graphics archive, campaign case studies, e-commerce storefronts and motion samples, clearly organized by discipline.",
     "tabsLabel": "Filter work by discipline",
     "open": "View project",
@@ -207,8 +207,8 @@
     },
     "marketing": {
       "attributionEyebrow": "Documented practical experience",
-      "attributionTitle": "Campaigns I helped manage and deliver",
-      "attribution": "These results are presented within the Branka portfolio as projects I helped manage and deliver as part of a team. The supplied figures and dashboard evidence are preserved without naming other team members.",
+      "attributionTitle": "Campaigns our team helped manage and deliver",
+      "attribution": "These results are presented within the Branka portfolio as projects our team helped manage and deliver. The supplied figures and dashboard evidence are preserved without naming other team members.",
       "resultsNote": "Figures are shown as provided in the supplied portfolio. Campaign periods and currencies vary by platform.",
       "overall": {
         "metric1": {
@@ -524,7 +524,7 @@
     }
   },
   "footer": {
-    "tagline": "I turn ideas into exceptional identities and visual experiences. Branka is a creative platform led by Ibrahim Almusabi, combining design, marketing and motion to build stronger brands.",
+    "tagline": "We turn ideas into exceptional identities and visual experiences. At Branka, we combine design, marketing and motion to build stronger brands.",
     "achievements": {
       "design": "5+ years of design experience",
       "marketing": "3+ years of marketing experience",
@@ -548,7 +548,7 @@
     "links": {
       "about": "About Branka",
       "services": "Services",
-      "projects": "Work",
+      "projects": "Our work",
       "contact": "Start a project",
       "instagram": "Instagram",
       "x": "X",
