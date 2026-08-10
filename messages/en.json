@@ -38,16 +38,16 @@
     },
     "metrics": {
       "metric1": {
-        "value": "5+",
-        "label": "years of design experience"
+        "value": "SAR 2.5M+",
+        "label": "documented campaign results"
       },
       "metric2": {
-        "value": "3+",
-        "label": "years of marketing experience"
+        "value": "08",
+        "label": "sectors represented in our work"
       },
       "metric3": {
         "value": "04",
-        "label": "connected creative disciplines"
+        "label": "integrated disciplines"
       }
     },
     "founder": "Ibrahim Almusabi",
@@ -73,12 +73,12 @@
       "craft": "Attention to detail",
       "results": "Purpose-led execution"
     },
-    "stat1Value": "5+",
-    "stat1Label": "Years in design",
-    "stat2Value": "3+",
-    "stat2Label": "Years in marketing",
+    "stat1Value": "SAR 2.5M+",
+    "stat1Label": "Documented campaign results",
+    "stat2Value": "08",
+    "stat2Label": "Sectors represented in our work",
     "stat3Value": "04",
-    "stat3Label": "Connected creative disciplines"
+    "stat3Label": "Integrated disciplines"
   },
   "services": {
     "eyebrow": "Services",
