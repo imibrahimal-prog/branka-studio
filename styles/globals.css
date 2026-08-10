@@ -224,7 +224,45 @@
   .hero-word-track {
     animation: heroWords 24s linear infinite;
     backface-visibility: hidden;
+    direction: ltr;
+    transform: translate3d(0, 0, 0);
     will-change: transform;
+  }
+
+  .hero-orbit {
+    transform-origin: 50% 50%;
+    backface-visibility: hidden;
+    will-change: transform;
+  }
+
+  .hero-orbit--outer {
+    animation: heroOrbitClockwise 30s linear infinite;
+  }
+
+  .hero-orbit--inner {
+    animation: heroOrbitCounterClockwise 22s linear infinite;
+  }
+
+  .hero-orbit-dot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    border: 2px solid #21140e;
+    border-radius: 9999px;
+    background: #c7a46a;
+    box-shadow: 0 5px 18px rgba(199, 164, 106, 0.42);
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  .hero-orbit-dot--outer {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  .hero-orbit-dot--inner {
+    width: 0.625rem;
+    height: 0.625rem;
   }
 
   .sector-marquee {
@@ -265,10 +303,28 @@
 
 @keyframes heroWords {
   from {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes heroOrbitClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes heroOrbitCounterClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
   }
 }
 

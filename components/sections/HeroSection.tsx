@@ -97,9 +97,11 @@ export function HeroSection() {
       />
 
       <div className="pointer-events-none absolute inset-x-0 top-[46%] overflow-hidden opacity-[0.055]">
-        <div className="hero-word-track whitespace-nowrap font-display text-[clamp(5rem,13vw,12rem)] font-black uppercase tracking-[-0.06em]">
-          GRAPHIC DESIGN · BRANDING · MOTION · GRAPHIC DESIGN · BRANDING ·
-          MOTION ·
+        <div className="hero-word-track flex w-max whitespace-nowrap font-display text-[clamp(5rem,13vw,12rem)] font-black uppercase tracking-[-0.06em]">
+          <span>GRAPHIC DESIGN · BRANDING · MOTION ·&nbsp;</span>
+          <span aria-hidden="true">
+            GRAPHIC DESIGN · BRANDING · MOTION ·&nbsp;
+          </span>
         </div>
       </div>
 
@@ -189,21 +191,18 @@ export function HeroSection() {
             aria-hidden="true"
           />
           <div className="relative aspect-square">
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-0 rounded-full border border-dashed border-luxury-gold/38"
-              aria-hidden="true"
-            />
-            <motion.div
-              animate={{ rotate: -360 }}
-              transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-4 rounded-full border border-white/10"
+            <div
+              className="hero-orbit hero-orbit--outer absolute inset-0 rounded-full border border-dashed border-luxury-gold/38"
               aria-hidden="true"
             >
-              <span className="absolute left-1/2 top-0 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#21140e] bg-luxury-gold shadow-lg" />
-              <span className="absolute bottom-0 left-1/2 h-2.5 w-2.5 -translate-x-1/2 translate-y-1/2 rounded-full border-2 border-[#21140e] bg-luxury-gold shadow-lg" />
-            </motion.div>
+              <span className="hero-orbit-dot hero-orbit-dot--outer" />
+            </div>
+            <div
+              className="hero-orbit hero-orbit--inner absolute inset-4 rounded-full border border-white/10"
+              aria-hidden="true"
+            >
+              <span className="hero-orbit-dot hero-orbit-dot--inner" />
+            </div>
             <div className="absolute inset-9 overflow-hidden rounded-full border-[7px] border-[#2e1d15] bg-luxury-black shadow-[0_35px_100px_rgba(0,0,0,0.45)] ring-1 ring-luxury-gold/35">
               <Image
                 src="/images/ibrahim-almusabi.webp"
