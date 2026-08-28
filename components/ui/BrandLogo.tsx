@@ -23,7 +23,7 @@ export function BrandLogo({
       >
         <Image
           src="/icons/branka-mark.png"
-          alt=""
+          alt="برانكا للإعلان والتسويق — Branka Advertising & Marketing"
           fill
           priority
           sizes={compact ? "56px" : "67px"}
@@ -39,8 +39,8 @@ export function BrandLogo({
         >
           BRANKA
         </span>
-        <span className="text-[9px] font-semibold uppercase tracking-[0.3em] text-luxury-gold">
-          Ibrahim Almusabi
+        <span className="text-[9px] font-semibold uppercase tracking-[0.24em] text-luxury-gold">
+          Advertising & Marketing
         </span>
       </span>
     </span>

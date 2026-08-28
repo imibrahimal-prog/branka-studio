@@ -9,18 +9,19 @@ export function FooterBrandLogo({ className }: FooterBrandLogoProps) {
   return (
     <span
       className={cn(
-        "relative block h-[190px] w-[260px] max-w-full overflow-hidden rounded-[1.4rem] bg-[#2b2022]",
+        "relative block w-[190px] md:w-[210px] max-w-full",
         className,
       )}
     >
       <Image
-        src="/images/branka-loading-logo.png"
-        alt="برانكا — إبراهيم المصعبي"
-        width={1278}
-        height={1536}
+        src="/images/branka-vertical-logo.png"
+        alt="برانكا للإعلان والتسويق — Branka Advertising & Marketing"
+        width={4000}
+        height={4800}
+        priority
         unoptimized
-        sizes="260px"
-        className="absolute left-1/2 top-[-76px] h-auto w-[280px] max-w-none -translate-x-1/2 object-contain"
+        sizes="(max-width: 768px) 190px, 210px"
+        className="h-auto w-full object-contain"
       />
     </span>
   );

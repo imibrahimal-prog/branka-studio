@@ -22,15 +22,22 @@ const config: Config = {
       },
       fontFamily: {
         sans: [
-          "Inter",
-          "Segoe UI",
+          "var(--font-manrope)",
+          "Manrope",
+          "var(--font-ibm-plex-arabic)",
           "IBM Plex Sans Arabic",
-          "Tahoma",
-          "Arial",
+          "Segoe UI",
           "sans-serif",
         ],
-        display: ["Georgia", "Times New Roman", "serif"],
-        arabic: ["IBM Plex Sans Arabic", "Tahoma", "Arial", "sans-serif"],
+        display: [
+          "var(--font-ibm-plex-arabic)",
+          "IBM Plex Sans Arabic",
+          "var(--font-manrope)",
+          "Manrope",
+          "sans-serif",
+        ],
+        arabic: ["var(--font-ibm-plex-arabic)", "IBM Plex Sans Arabic", "sans-serif"],
+        manrope: ["var(--font-manrope)", "Manrope", "sans-serif"],
       },
       fontSize: {
         "hero-sm": [

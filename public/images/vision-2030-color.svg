@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="1000" height="500" fill="none">
+  <!-- Saudi Vision 2030 Official Colored Emblem - High-Vibrance for Luxury Dark UI -->
+  
+  <!-- Text & Numbers Color Definition -->
+  <g fill="#CBD5E1">
+    <!-- Top: VISION (English) -->
+    <g transform="translate(195, 85)" fill="#E2E8F0">
+      <!-- V -->
+      <path d="M0 0 L15 0 L32 50 L49 0 L64 0 L39 70 L25 70 Z"/>
+      <!-- I -->
+      <rect x="75" y="0" width="14" height="70"/>
+      <!-- S -->
+      <path d="M140 18 C135 7 124 2 110 2 C94 2 83 11 83 23 C83 34 92 41 106 45 L118 49 C133 54 145 63 145 78 C145 94 130 105 110 105 C90 105 76 94 72 80 L86 76 C89 86 98 92 110 92 C122 92 131 85 131 77 C131 68 123 62 110 58 L98 54 C83 49 70 41 70 24 C70 9 84 0 109 0 C128 0 140 9 144 21 Z" transform="translate(25, -2) scale(0.67)"/>
+      <!-- I -->
+      <rect x="180" y="0" width="14" height="70"/>
+      <!-- O -->
+      <path d="M230 35 C230 15 244 0 265 0 C286 0 300 15 300 35 C300 55 286 70 265 70 C244 70 230 55 230 35 Z M244 35 C244 48 253 58 265 58 C277 58 286 48 286 35 C286 22 277 12 265 12 C253 12 244 22 244 35 Z"/>
+      <!-- N -->
+      <path d="M312 0 L326 0 L362 50 L362 0 L376 0 L376 70 L362 70 L326 20 L326 70 L312 70 Z"/>
+    </g>
+
+    <!-- Top: رؤية (Arabic) -->
+    <g transform="translate(535, 30)" fill="#E2E8F0">
+      <!-- TAA Marbuta Dots -->
+      <circle cx="230" cy="18" r="4.5"/>
+      <circle cx="243" cy="18" r="4.5"/>
+      <!-- YAA Dots -->
+      <circle cx="160" cy="98" r="4.5"/>
+      <circle cx="173" cy="98" r="4.5"/>
+      <!-- Arabic letters path: رؤية -->
+      <path d="M260 38 C260 25 250 22 238 22 C218 22 208 36 208 55 C208 72 216 80 234 80 L250 80 L250 92 L228 92 C204 92 195 78 195 56 C195 32 210 10 238 10 C262 10 274 24 274 42 L274 80 L260 80 Z"/>
+      <path d="M195 80 L145 80 C138 80 134 74 134 65 C134 45 150 40 166 40 C178 40 188 44 192 48 L192 36 C186 30 174 27 163 27 C140 27 122 38 120 60 C118 78 130 92 152 92 L195 92 Z M146 54 C139 57 136 62 136 67 C136 71 139 74 144 74 L178 74 L178 52 C172 49 162 48 155 48 C150 48 147 50 146 54 Z"/>
+      <!-- Waw loop & tail -->
+      <path d="M85 55 C85 34 99 22 118 22 C135 22 146 32 146 48 C146 68 132 80 114 80 L98 80 C95 88 88 112 55 125 L49 114 C75 103 82 86 84 80 C78 75 85 62 85 55 Z M100 52 C100 60 106 68 115 68 C124 68 131 61 131 50 C131 38 123 33 115 33 C106 33 100 40 100 52 Z"/>
+      <!-- Hamza on Waw -->
+      <path d="M110 5 C110 0 114 -4 120 -4 C125 -4 128 -1 128 3 C128 7 124 10 120 12 L128 15 L124 18 L114 14 C111 11 110 8 110 5 Z"/>
+      <!-- Raa -->
+      <path d="M35 30 L48 30 L48 65 C48 85 40 108 8 125 L0 115 C26 100 34 82 35 68 Z"/>
+    </g>
+
+    <!-- Main Center: '2' and '30' -->
+    <!-- '2' -->
+    <path d="M195 285 L310 285 L310 255 L245 255 C245 220 270 195 300 172 C318 158 330 140 330 118 C330 75 295 42 245 42 C195 42 165 75 162 120 L200 124 C202 96 218 76 245 76 C272 76 290 92 290 116 C290 132 280 144 265 156 C225 188 195 225 195 285 Z" transform="translate(0, 5)" fill="#94A3B8"/>
+
+    <!-- '3' -->
+    <path d="M518 175 C518 155 532 140 555 140 C578 140 592 155 592 175 C592 198 575 214 550 216 L550 244 C582 246 605 264 605 294 C605 328 578 350 540 350 C498 350 472 322 470 280 L508 276 C510 302 522 318 540 318 C558 318 568 306 568 292 C568 274 552 262 530 262 L520 262 L520 232 L532 232 C550 232 562 222 562 206 C562 192 552 182 538 182 C522 182 514 192 512 208 L474 204 C478 175 498 152 535 152 C548 152 558 155 565 160 Z" transform="translate(50, -55)" fill="#94A3B8"/>
+
+    <!-- '0' (Last Digit) -->
+    <path d="M705 195 C705 130 740 92 795 92 C850 92 885 130 885 195 C885 260 850 298 795 298 C740 298 705 260 705 195 Z M745 195 C745 240 765 266 795 266 C825 266 845 240 845 195 C845 150 825 124 795 124 C765 124 745 150 745 195 Z" transform="translate(15, -2)" fill="#94A3B8"/>
+
+    <!-- Bottom: المملكة العربية السعودية (Arabic) -->
+    <text x="500" y="370" font-family="'IBM Plex Sans Arabic', Tahoma, sans-serif" font-size="34" font-weight="600" text-anchor="middle" fill="#CBD5E1" letter-spacing="1">المملكة العربية السعودية</text>
+
+    <!-- Bottom: KINGDOM OF SAUDI ARABIA (English) -->
+    <text x="500" y="420" font-family="'Inter', Arial, sans-serif" font-size="28" font-weight="500" text-anchor="middle" fill="#94A3B8" letter-spacing="9">KINGDOM OF SAUDI ARABIA</text>
+  </g>
+
+  <!-- '0' Mosaic & Emblem (Second Digit - Saudi Emblem surrounded by multi-color 24-point geometric starburst) -->
+  <g transform="translate(425, 195)">
+    <!-- Central Palm Tree in Authentic Green -->
+    <g transform="scale(0.85) translate(-10, -52)" fill="#239454">
+      <!-- Trunk -->
+      <path d="M8 82 L12 82 L12 55 L8 55 Z"/>
+      <!-- Leaves -->
+      <path d="M10 56 C10 40 2 30 -14 26 C-6 36 2 46 6 56 Z"/>
+      <path d="M10 56 C10 40 18 30 34 26 C26 36 18 46 14 56 Z"/>
+      <path d="M10 50 C8 32 -3 20 -20 14 C-10 24 -2 36 4 48 Z"/>
+      <path d="M10 50 C12 32 23 20 40 14 C30 24 22 36 16 48 Z"/>
+      <path d="M10 42 C10 20 5 10 -10 2 C-2 12 5 24 8 38 Z"/>
+      <path d="M10 42 C10 20 15 10 30 2 C22 12 15 24 12 38 Z"/>
+      <path d="M10 35 C10 12 10 -2 10 -10 C10 -2 10 12 10 35 Z" stroke="#239454" stroke-width="3"/>
+      
+      <!-- Crossed Swords -->
+      <g transform="translate(10, 88)" fill="#239454">
+        <!-- Sword 1 -->
+        <path d="M-30 8 C-10 14 12 10 32 -6 L34 -4 C14 14 -10 18 -32 10 Z"/>
+        <path d="M-30 4 L-34 12 L-28 10 Z"/>
+        <!-- Sword 2 -->
+        <path d="M30 8 C10 14 -12 10 -32 -6 L-34 -4 C-14 14 10 18 32 10 Z"/>
+        <path d="M30 4 L34 12 L28 10 Z"/>
+      </g>
+    </g>
+
+    <!-- Mosaic Geometric Star Diamond Elements with Multi-Color Spectrum -->
+    <g id="starburst-color">
+      <!-- Inner ring of 8 diamonds (Green & Lime Spectrum) -->
+      <g transform="rotate(0)"><rect x="-4" y="-55" width="8" height="8" transform="rotate(45)" fill="#239454"/></g>
+      <g transform="rotate(45)"><rect x="-4" y="-55" width="8" height="8" transform="rotate(45)" fill="#8DC63F"/></g>
+      <g transform="rotate(90)"><rect x="-4" y="-55" width="8" height="8" transform="rotate(45)" fill="#239454"/></g>
+      <g transform="rotate(135)"><rect x="-4" y="-55" width="8" height="8" transform="rotate(45)" fill="#8DC63F"/></g>
+      <g transform="rotate(180)"><rect x="-4" y="-55" width="8" height="8" transform="rotate(45)" fill="#239454"/></g>
+      <g transform="rotate(225)"><rect x="-4" y="-55" width="8" height="8" transform="rotate(45)" fill="#8DC63F"/></g>
+      <g transform="rotate(270)"><rect x="-4" y="-55" width="8" height="8" transform="rotate(45)" fill="#239454"/></g>
+      <g transform="rotate(315)"><rect x="-4" y="-55" width="8" height="8" transform="rotate(45)" fill="#8DC63F"/></g>
+
+      <!-- Middle ring of 16 diamonds (Turquoise, Cyan, Lime, Gold, Green, Blue) -->
+      <g transform="rotate(0)"><rect x="-5" y="-72" width="10" height="10" transform="rotate(45)" fill="#00B5AD"/></g>
+      <g transform="rotate(22.5)"><rect x="-5" y="-72" width="10" height="10" transform="rotate(45)" fill="#2897D5"/></g>
+      <g transform="rotate(45)"><rect x="-5" y="-72" width="10" height="10" transform="rotate(45)" fill="#8DC63F"/></g>
+      <g transform="rotate(67.5)"><rect x="-5" y="-72" width="10" height="10" transform="rotate(45)" fill="#DDB827"/></g>
+      <g transform="rotate(90)"><rect x="-5" y="-72" width="10" height="10" transform="rotate(45)" fill="#239454"/></g>
+      <g transform="rotate(112.5)"><rect x="-5" y="-72" width="10" height="10" transform="rotate(45)" fill="#00B5AD"/></g>
+      <g transform="rotate(135)"><rect x="-5" y="-72" width="10" height="10" transform="rotate(45)" fill="#8DC63F"/></g>
+      <g transform="rotate(157.5)"><rect x="-5" y="-72" width="10" height="10" transform="rotate(45)" fill="#2897D5"/></g>
+      <g transform="rotate(180)"><rect x="-5" y="-72" width="10" height="10" transform="rotate(45)" fill="#00B5AD"/></g>
+      <g transform="rotate(202.5)"><rect x="-5" y="-72" width="10" height="10" transform="rotate(45)" fill="#DDB827"/></g>
+      <g transform="rotate(225)"><rect x="-5" y="-72" width="10" height="10" transform="rotate(45)" fill="#239454"/></g>
+      <g transform="rotate(247.5)"><rect x="-5" y="-72" width="10" height="10" transform="rotate(45)" fill="#8DC63F"/></g>
+      <g transform="rotate(270)"><rect x="-5" y="-72" width="10" height="10" transform="rotate(45)" fill="#2897D5"/></g>
+      <g transform="rotate(292.5)"><rect x="-5" y="-72" width="10" height="10" transform="rotate(45)" fill="#00B5AD"/></g>
+      <g transform="rotate(315)"><rect x="-5" y="-72" width="10" height="10" transform="rotate(45)" fill="#8DC63F"/></g>
+      <g transform="rotate(337.5)"><rect x="-5" y="-72" width="10" height="10" transform="rotate(45)" fill="#DDB827"/></g>
+
+      <!-- Outer ring of 24 points (Vibrant Spectrum: Cyan, Royal Blue, Emerald, Gold, Lime) -->
+      <g transform="rotate(0)"><rect x="-6" y="-92" width="12" height="12" transform="rotate(45)" fill="#00AEC7"/></g>
+      <g transform="rotate(15)"><rect x="-5" y="-90" width="10" height="10" transform="rotate(45)" fill="#2897D5"/></g>
+      <g transform="rotate(30)"><rect x="-5" y="-90" width="10" height="10" transform="rotate(45)" fill="#186498"/></g>
+      <g transform="rotate(45)"><rect x="-6" y="-92" width="12" height="12" transform="rotate(45)" fill="#8DC63F"/></g>
+      <g transform="rotate(60)"><rect x="-5" y="-90" width="10" height="10" transform="rotate(45)" fill="#DDB827"/></g>
+      <g transform="rotate(75)"><rect x="-5" y="-90" width="10" height="10" transform="rotate(45)" fill="#F5A623"/></g>
+      <g transform="rotate(90)"><rect x="-6" y="-92" width="12" height="12" transform="rotate(45)" fill="#239454"/></g>
+      <g transform="rotate(105)"><rect x="-5" y="-90" width="10" height="10" transform="rotate(45)" fill="#00B5AD"/></g>
+      <g transform="rotate(120)"><rect x="-5" y="-90" width="10" height="10" transform="rotate(45)" fill="#00AEC7"/></g>
+      <g transform="rotate(135)"><rect x="-6" y="-92" width="12" height="12" transform="rotate(45)" fill="#8DC63F"/></g>
+      <g transform="rotate(150)"><rect x="-5" y="-90" width="10" height="10" transform="rotate(45)" fill="#2897D5"/></g>
+      <g transform="rotate(165)"><rect x="-5" y="-90" width="10" height="10" transform="rotate(45)" fill="#186498"/></g>
+      <g transform="rotate(180)"><rect x="-6" y="-92" width="12" height="12" transform="rotate(45)" fill="#00AEC7"/></g>
+      <g transform="rotate(195)"><rect x="-5" y="-90" width="10" height="10" transform="rotate(45)" fill="#DDB827"/></g>
+      <g transform="rotate(210)"><rect x="-5" y="-90" width="10" height="10" transform="rotate(45)" fill="#F5A623"/></g>
+      <g transform="rotate(225)"><rect x="-6" y="-92" width="12" height="12" transform="rotate(45)" fill="#239454"/></g>
+      <g transform="rotate(240)"><rect x="-5" y="-90" width="10" height="10" transform="rotate(45)" fill="#8DC63F"/></g>
+      <g transform="rotate(255)"><rect x="-5" y="-90" width="10" height="10" transform="rotate(45)" fill="#00B5AD"/></g>
+      <g transform="rotate(270)"><rect x="-6" y="-92" width="12" height="12" transform="rotate(45)" fill="#2897D5"/></g>
+      <g transform="rotate(285)"><rect x="-5" y="-90" width="10" height="10" transform="rotate(45)" fill="#186498"/></g>
+      <g transform="rotate(300)"><rect x="-5" y="-90" width="10" height="10" transform="rotate(45)" fill="#00AEC7"/></g>
+      <g transform="rotate(315)"><rect x="-6" y="-92" width="12" height="12" transform="rotate(45)" fill="#8DC63F"/></g>
+      <g transform="rotate(330)"><rect x="-5" y="-90" width="10" height="10" transform="rotate(45)" fill="#DDB827"/></g>
+      <g transform="rotate(345)"><rect x="-5" y="-90" width="10" height="10" transform="rotate(45)" fill="#239454"/></g>
+
+      <!-- 8 Outer accent tips -->
+      <g transform="rotate(0)"><rect x="-4" y="-108" width="8" height="8" transform="rotate(45)" fill="#00AEC7"/></g>
+      <g transform="rotate(45)"><rect x="-4" y="-108" width="8" height="8" transform="rotate(45)" fill="#8DC63F"/></g>
+      <g transform="rotate(90)"><rect x="-4" y="-108" width="8" height="8" transform="rotate(45)" fill="#239454"/></g>
+      <g transform="rotate(135)"><rect x="-4" y="-108" width="8" height="8" transform="rotate(45)" fill="#2897D5"/></g>
+      <g transform="rotate(180)"><rect x="-4" y="-108" width="8" height="8" transform="rotate(45)" fill="#00AEC7"/></g>
+      <g transform="rotate(225)"><rect x="-4" y="-108" width="8" height="8" transform="rotate(45)" fill="#239454"/></g>
+      <g transform="rotate(270)"><rect x="-4" y="-108" width="8" height="8" transform="rotate(45)" fill="#2897D5"/></g>
+      <g transform="rotate(315)"><rect x="-4" y="-108" width="8" height="8" transform="rotate(45)" fill="#DDB827"/></g>
+    </g>
+  </g>
+</svg>

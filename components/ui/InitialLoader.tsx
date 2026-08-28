@@ -120,7 +120,7 @@ export function InitialLoader() {
           exit={{ opacity: 0 }}
           transition={{ duration: reduceMotion ? 0.12 : 0.5 }}
           className="fixed inset-0 z-[100] flex h-[100dvh] items-center justify-center overflow-hidden bg-[#2b2022]"
-          aria-label="Branka — Ibrahim Almusabi"
+          aria-label="Branka | Advertising and Marketing"
           aria-live="polite"
           role="status"
         >
@@ -141,7 +141,7 @@ export function InitialLoader() {
             <div className="relative w-[58vw] max-w-[460px] sm:w-[48vw]">
               <Image
                 src="/images/branka-loading-logo.png"
-                alt="برانكا — إبراهيم المصعبي"
+                alt="برانكا | Branka"
                 width={1278}
                 height={1536}
                 priority
