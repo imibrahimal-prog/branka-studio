@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1600" width="1600" height="1600">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#faf6f0"/>
+      <stop offset="100%" stop-color="#f2ebe0"/>
+    </radialGradient>
+    <radialGradient id="groundShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(30,16,10,0.22)"/>
+      <stop offset="60%" stop-color="rgba(30,16,10,0.06)"/>
+      <stop offset="100%" stop-color="rgba(30,16,10,0)"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5e1b8"/>
+      <stop offset="45%" stop-color="#c7a46a"/>
+      <stop offset="100%" stop-color="#8c6b38"/>
+    </linearGradient>
+    <linearGradient id="pinRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="50%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5efe6"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="25" stdDeviation="30" flood-color="#1e100a" flood-opacity="0.18"/>
+    </filter>
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#1e100a" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1600" fill="url(#bgGrad)" />
+  <ellipse cx="800" cy="1290" rx="560" ry="160" fill="url(#groundShadow)" />
+
+  <g transform="translate(0, -30)">
+    <!-- 3D Isometric Search Browser in Background -->
+    <g transform="translate(340, 360)" filter="url(#softGlow)">
+      <rect x="0" y="0" width="920" height="480" rx="36" fill="#ffffff" stroke="url(#goldGrad)" stroke-width="6"/>
+      <!-- Header bar with 3 dots -->
+      <rect x="0" y="0" width="920" height="75" rx="36" fill="#1e1410"/>
+      <circle cx="45" cy="38" r="10" fill="#ef4444"/>
+      <circle cx="75" cy="38" r="10" fill="#f59e0b"/>
+      <circle cx="105" cy="38" r="10" fill="#22c55e"/>
+
+      <!-- Search Input Bar inside window -->
+      <rect x="180" y="18" width="580" height="40" rx="20" fill="#2a1e1a"/>
+      <circle cx="210" cy="38" r="10" fill="url(#goldGrad)"/>
+      <rect x="235" y="32" width="220" height="12" rx="6" fill="#ffffff" opacity="0.8"/>
+
+      <!-- Search Result Cards inside browser -->
+      <g transform="translate(60, 110)">
+        <rect x="0" y="0" width="520" height="155" rx="20" fill="#faf6f0" stroke="#e8dfd2" stroke-width="2"/>
+        <circle cx="40" cy="40" r="18" fill="url(#goldGrad)"/>
+        <rect x="75" y="28" width="260" height="16" rx="8" fill="#1e1410"/>
+        <rect x="75" y="52" width="160" height="12" rx="6" fill="#16a34a"/>
+        <rect x="25" y="85" width="460" height="12" rx="6" fill="#2a1e1a" opacity="0.6"/>
+        <rect x="25" y="108" width="380" height="12" rx="6" fill="#2a1e1a" opacity="0.4"/>
+      </g>
+
+      <!-- Knowledge Panel on Right of Browser -->
+      <g transform="translate(620, 110)">
+        <rect x="0" y="0" width="240" height="330" rx="22" fill="#1e1410" stroke="url(#goldGrad)" stroke-width="3"/>
+        <rect x="20" y="20" width="200" height="100" rx="14" fill="url(#goldGrad)"/>
+        <rect x="20" y="140" width="140" height="16" rx="8" fill="#ffffff"/>
+        <!-- 5 Star Rating -->
+        <g transform="translate(20, 170)">
+          <polygon points="10,0 13,8 21,8 15,13 17,21 10,16 3,21 5,13 -1,8 7,8" fill="#f59e0b"/>
+          <polygon points="35,0 38,8 46,8 40,13 42,21 35,16 28,21 30,13 24,8 32,8" fill="#f59e0b"/>
+          <polygon points="60,0 63,8 71,8 65,13 67,21 60,16 53,21 55,13 49,8 57,8" fill="#f59e0b"/>
+          <polygon points="85,0 88,8 96,8 90,13 92,21 85,16 78,21 80,13 74,8 82,8" fill="#f59e0b"/>
+          <polygon points="110,0 113,8 121,8 115,13 117,21 110,16 103,21 105,13 99,8 107,8" fill="#f59e0b"/>
+        </g>
+        <rect x="20" y="210" width="180" height="12" rx="6" fill="#e8dfd2"/>
+        <rect x="20" y="235" width="140" height="12" rx="6" fill="#e8dfd2"/>
+        <!-- Call CTA button -->
+        <rect x="20" y="268" width="200" height="42" rx="21" fill="url(#goldGrad)"/>
+      </g>
+    </g>
+
+    <!-- 3D Folded Map Grid (Left Foreground) -->
+    <g transform="matrix(0.92 -0.2 0 0.9 220 840)" filter="url(#cardShadow)">
+      <rect x="0" y="0" width="460" height="320" rx="30" fill="#faf5ee" stroke="url(#goldGrad)" stroke-width="4"/>
+      <!-- Map Roads and Routes -->
+      <path d="M 0 120 Q 140 180 260 100 T 460 220" fill="none" stroke="#e0d1bc" stroke-width="28"/>
+      <path d="M 180 0 Q 190 140 320 320" fill="none" stroke="#e0d1bc" stroke-width="24"/>
+      <path d="M 0 120 Q 140 180 260 100 T 460 220" fill="none" stroke="#ffffff" stroke-width="16"/>
+      <path d="M 180 0 Q 190 140 320 320" fill="none" stroke="#ffffff" stroke-width="14"/>
+    </g>
+
+    <!-- Giant 3D Location Map Pin (Hero Foreground Center) -->
+    <g transform="translate(680, 720)" filter="url(#softGlow)">
+      <!-- Pin Radar Rings -->
+      <ellipse cx="120" cy="350" rx="110" ry="40" fill="url(#goldGrad)" opacity="0.35"/>
+      <ellipse cx="120" cy="350" rx="55" ry="20" fill="url(#pinRed)" opacity="0.4"/>
+      <!-- Pin Head & Pointer -->
+      <path d="M 120 350 C 60 250, 0 180, 0 120 A 120 120 0 1 1 240 120 C 240 180, 180 250, 120 350 Z" fill="url(#pinRed)" stroke="#ffffff" stroke-width="6"/>
+      <circle cx="120" cy="120" r="48" fill="#ffffff"/>
+      <circle cx="120" cy="120" r="32" fill="url(#goldGrad)"/>
+    </g>
+
+    <!-- Floating 3D Search Rank #1 Badge -->
+    <g transform="translate(1040, 760)" filter="url(#cardShadow)">
+      <rect x="0" y="0" width="280" height="130" rx="30" fill="#ffffff" stroke="url(#goldGrad)" stroke-width="4"/>
+      <circle cx="55" cy="55" r="28" fill="url(#goldGrad)"/>
+      <text x="55" y="65" font-family="sans-serif" font-size="28" font-weight="bold" fill="#140a06" text-anchor="middle">#1</text>
+      <rect x="105" y="36" width="145" height="18" rx="9" fill="#1e1410"/>
+      <rect x="105" y="65" width="105" height="14" rx="7" fill="#16a34a"/>
+      <rect x="25" y="98" width="230" height="12" rx="6" fill="#e8dfd2"/>
+    </g>
+  </g>
+</svg>

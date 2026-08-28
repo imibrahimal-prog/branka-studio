@@ -5,7 +5,7 @@ export default function LocaleLoading() {
     <div
       className="relative flex h-[100dvh] items-center justify-center overflow-hidden bg-[#2b2022]"
       role="status"
-      aria-label="Branka — Ibrahim Almusabi"
+      aria-label="Branka | Advertising and Marketing"
     >
       <Image
         src="/images/branka-loader-pattern.png"
@@ -32,7 +32,7 @@ export default function LocaleLoading() {
         <div className="relative w-[58vw] max-w-[460px] sm:w-[48vw]">
           <Image
             src="/images/branka-loading-logo.png"
-            alt="برانكا — إبراهيم المصعبي"
+            alt="برانكا | Branka"
             width={1278}
             height={1536}
             priority

@@ -14,10 +14,12 @@ import { LocaleSwitcher } from "@/components/ui/LocaleSwitcher";
 import { FooterBrandLogo } from "@/components/ui/FooterBrandLogo";
 
 const footerLinks = [
-  { href: "/#about", key: "about" as const },
   { href: "/#services", key: "services" as const },
-  { href: "/#projects", key: "projects" as const },
-  { href: "/#contact", key: "contact" as const },
+  { href: "/#why-us", key: "whyUs" as const },
+  { href: "/work", key: "projects" as const },
+  { href: "/#methodology", key: "methodology" as const },
+  { href: "/#results", key: "results" as const },
+  { href: "/contact", key: "contact" as const },
 ];
 const specialtyKeys = [
   "identity",
@@ -25,7 +27,6 @@ const specialtyKeys = [
   "events",
   "environmental",
   "presentations",
-  "marketing",
   "motion",
   "web",
 ] as const;
@@ -36,9 +37,7 @@ export function Footer() {
   const instagramUrl =
     process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? "https://www.instagram.com/i_dd_m";
   const xUrl = process.env.NEXT_PUBLIC_X_URL ?? "https://x.com/i_dd_m";
-  const linkedinUrl =
-    process.env.NEXT_PUBLIC_LINKEDIN_URL ??
-    "https://www.linkedin.com/in/ibrahim-ds";
+  const linkedinUrl = process.env.NEXT_PUBLIC_LINKEDIN_URL;
   const contactEmail =
     process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "info@braanka.com";
   const whatsappUrl =
@@ -86,39 +85,28 @@ export function Footer() {
   }[];
 
   return (
-    <footer className="border-t border-[var(--color-border)] bg-[#2b2022]">
-      <div className="luxury-container py-14 md:py-16">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.35fr_0.65fr_0.75fr_0.75fr] lg:gap-10">
-          <div className="space-y-5">
+    <footer className="border-t border-white/10 bg-[#241719] text-[#f8f4ec]">
+      <div className="luxury-container py-8 md:py-11">
+        <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-[1.35fr_0.65fr_0.75fr_0.75fr] lg:gap-8 items-start">
+          <div className="space-y-3">
             <Link
               href="/"
               className="!flex !w-full !justify-center lg:!justify-start"
             >
               <FooterBrandLogo className="!mx-auto lg:!mx-0" />
             </Link>
-            <p className="max-w-xl text-sm leading-7 text-[var(--color-muted)] md:text-base">
-              {t("tagline")}
-            </p>
-            <div className="flex max-w-2xl flex-wrap gap-2.5">
-              {(["design", "marketing", "results"] as const).map((key) => (
-                <span
-                  key={key}
-                  className="rounded-full border border-[var(--color-border)] bg-[var(--color-background)] px-4 py-2 text-xs font-semibold text-[var(--color-muted)]"
-                >
-                  {t(`achievements.${key}`)}
-                </span>
-              ))}
-            </div>
           </div>
 
-          <div className="space-y-4">
-            <p className="luxury-eyebrow">{t("navigation")}</p>
+          <div className="space-y-3">
+            <p className="text-xs font-bold uppercase tracking-widest text-luxury-gold">
+              {t("navigation")}
+            </p>
             <ul className="space-y-2">
               {footerLinks.map((link) => (
                 <li key={link.key}>
                   <Link
                     href={link.href}
-                    className="text-sm text-[var(--color-muted)] transition-colors hover:text-luxury-gold"
+                    className="text-xs sm:text-sm text-[#e8ded3] transition-colors hover:text-luxury-gold font-medium"
                   >
                     {t(`links.${link.key}`)}
                   </Link>
@@ -127,13 +115,15 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="space-y-4">
-            <p className="luxury-eyebrow">{t("specialtiesTitle")}</p>
-            <ul className="space-y-2.5">
+          <div className="space-y-3">
+            <p className="text-xs font-bold uppercase tracking-widest text-luxury-gold">
+              {t("specialtiesTitle")}
+            </p>
+            <ul className="space-y-2">
               {specialtyKeys.map((key) => (
                 <li
                   key={key}
-                  className="text-sm leading-6 text-[var(--color-muted)]"
+                  className="text-xs sm:text-sm leading-5 text-[#dcd0c2] font-medium"
                 >
                   {t(`specialties.${key}`)}
                 </li>
@@ -141,17 +131,19 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="space-y-4">
-            <p className="luxury-eyebrow">{t("social")}</p>
+          <div className="space-y-3">
+            <p className="text-xs font-bold uppercase tracking-widest text-luxury-gold">
+              {t("social")}
+            </p>
             {socialLinks.length > 0 && (
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3">
                 {socialLinks.map(({ href, label, icon: Icon }) => (
                   <a
                     key={href}
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-background)] transition-all duration-300 hover:-translate-y-0.5 hover:border-luxury-gold hover:text-luxury-gold"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-[#342426] text-[#f8f4ec] transition-all duration-300 hover:-translate-y-0.5 hover:border-luxury-gold hover:text-luxury-gold hover:bg-luxury-gold/10"
                     aria-label={label}
                   >
                     <Icon className="h-4 w-4" />
@@ -163,20 +155,20 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="luxury-divider my-10" />
+        <div className="my-6 md:my-7 border-t border-white/10" />
 
-        <div className="flex flex-col items-center justify-between gap-4 text-xs uppercase tracking-widest text-[var(--color-muted)] sm:flex-row">
-          <p>
+        <div className="relative flex items-center justify-center text-xs sm:text-sm font-semibold tracking-wider text-[#f8f4ec]">
+          <p className="text-center text-[#f8f4ec]">
             &copy; {year} Branka. {t("rights")}
           </p>
           <button
             type="button"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="branka-back-to-top"
+            className="branka-back-to-top absolute end-0 text-[#f8f4ec] hover:text-luxury-gold hover:border-luxury-gold"
             aria-label={t("backToTop")}
             title={t("backToTop")}
           >
-            <ArrowUp className="h-5 w-5" aria-hidden="true" />
+            <ArrowUp className="h-4 w-4" aria-hidden="true" />
           </button>
         </div>
       </div>

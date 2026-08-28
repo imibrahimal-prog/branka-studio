@@ -10,10 +10,12 @@ import { LocaleSwitcher } from "@/components/ui/LocaleSwitcher";
 
 const navItems = [
   { href: "/", key: "home" as const },
-  { href: "/#about", key: "about" as const },
   { href: "/#services", key: "services" as const },
-  { href: "/#projects", key: "projects" as const },
-  { href: "/#contact", key: "contact" as const },
+  { href: "/#why-us", key: "whyUs" as const },
+  { href: "/work", key: "projects" as const },
+  { href: "/#methodology", key: "methodology" as const },
+  { href: "/#results", key: "results" as const },
+  { href: "/contact", key: "contact" as const },
 ];
 
 export function Navigation({
@@ -52,20 +54,33 @@ export function Navigation({
         )}
         aria-label={t("label")}
       >
-        {navItems.map((item) => (
-          <Link
-            key={item.key}
-            href={item.href}
-            className={cn(
-              "branka-nav-link rounded-full px-4 py-2 text-xs font-semibold transition-colors duration-300",
-              inverse
-                ? "text-white/55 hover:bg-white/10 hover:text-white"
-                : "text-[var(--color-muted)] hover:bg-[var(--color-surface)] hover:text-[var(--color-foreground)]",
-            )}
-          >
-            {t(item.key)}
-          </Link>
-        ))}
+        {navItems.map((item) => {
+          const isActive =
+            item.href === "/contact"
+              ? pathname === "/contact"
+              : item.href === "/work"
+                ? pathname === "/work"
+                : item.href === "/"
+                  ? pathname === "/"
+                  : false;
+
+          return (
+            <Link
+              key={item.key}
+              href={item.href}
+              className={cn(
+                "branka-nav-link rounded-full px-4 py-2 text-xs font-semibold transition-colors duration-300",
+                isActive
+                  ? "bg-luxury-gold/20 text-luxury-gold"
+                  : inverse
+                    ? "text-white/55 hover:bg-white/10 hover:text-white"
+                    : "text-[var(--color-muted)] hover:bg-[var(--color-surface)] hover:text-[var(--color-foreground)]",
+              )}
+            >
+              {t(item.key)}
+            </Link>
+          );
+        })}
       </nav>
 
       <button

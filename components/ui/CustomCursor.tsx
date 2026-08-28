@@ -19,11 +19,17 @@ export function CustomCursor() {
     syncEnabled();
     media.addEventListener("change", syncEnabled);
 
+    let rafId: number | null = null;
+
     function move(event: PointerEvent) {
-      cursorX.set(event.clientX - 19);
-      cursorY.set(event.clientY - 19);
-      dotX.set(event.clientX - 3);
-      dotY.set(event.clientY - 3);
+      if (rafId !== null) return;
+      rafId = requestAnimationFrame(() => {
+        cursorX.set(event.clientX - 19);
+        cursorY.set(event.clientY - 19);
+        dotX.set(event.clientX - 3);
+        dotY.set(event.clientY - 3);
+        rafId = null;
+      });
     }
 
     function checkTarget(event: PointerEvent) {
@@ -37,9 +43,10 @@ export function CustomCursor() {
       );
     }
 
-    window.addEventListener("pointermove", move);
-    window.addEventListener("pointerover", checkTarget);
+    window.addEventListener("pointermove", move, { passive: true });
+    window.addEventListener("pointerover", checkTarget, { passive: true });
     return () => {
+      if (rafId !== null) cancelAnimationFrame(rafId);
       media.removeEventListener("change", syncEnabled);
       window.removeEventListener("pointermove", move);
       window.removeEventListener("pointerover", checkTarget);
