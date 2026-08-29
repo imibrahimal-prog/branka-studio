@@ -2,7 +2,7 @@ import { MessageCircle, Phone } from "lucide-react";
 
 export function FloatingWhatsApp() {
   const whatsappUrl =
-    process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "https://wa.me/966502757844";
+    process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "https://wa.me/966552409575";
 
   return (
     <a

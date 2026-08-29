@@ -121,7 +121,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     logo: "https://www.braanka.com/images/branka-vertical-logo.png",
     image: "https://www.braanka.com/images/branka-vertical-logo-bg.png",
     email: "info@braanka.com",
-    telephone: "+966502757844",
+    telephone: "+966552409575",
     description: isRtl
       ? "برانكا للإعلان والتسويق: وكالة متخصصة في الرياض والمملكة العربية السعودية لتقديم خدمات الهوية البصرية، التسويق الرقمي، إدارة الحملات الإعلانية، وتطوير المواقع والمتاجر الإلكترونية."
       : "Branka Advertising & Marketing: Leading creative and digital marketing agency in Riyadh and Saudi Arabia specializing in visual identity, performance marketing, paid ads management, and web development.",

@@ -42,8 +42,8 @@ export function ContactPageContent() {
   const xUrl = process.env.NEXT_PUBLIC_X_URL ?? "https://x.com/i_dd_m";
   const linkedinUrl = process.env.NEXT_PUBLIC_LINKEDIN_URL;
   const whatsappUrl =
-    process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "https://wa.me/966502757844";
-  const phoneDisplay = "+966 50 275 7844";
+    process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "https://wa.me/966552409575";
+  const phoneDisplay = "+966 55 240 9575";
 
   const formSchema = z.object({
     name: z
@@ -213,7 +213,7 @@ export function ContactPageContent() {
               >
                 {/* Card 1: Call Us */}
                 <a
-                  href="tel:+966502757844"
+                  href="tel:+966552409575"
                   className="group relative flex items-center justify-between gap-4 rounded-[1.6rem] border border-white/10 bg-[#241712] p-6 shadow-[0_10px_35px_rgba(0,0,0,0.15)] transition-all duration-300 hover:-translate-y-1 hover:border-luxury-gold hover:shadow-[0_16px_45px_rgba(199,164,106,0.15)]"
                 >
                   <div className="flex flex-col">
