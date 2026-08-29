@@ -15,6 +15,7 @@ const navItems = [
   { href: "/work", key: "projects" as const },
   { href: "/#methodology", key: "methodology" as const },
   { href: "/#results", key: "results" as const },
+  { href: "/affiliate", key: "affiliate" as const },
   { href: "/contact", key: "contact" as const },
 ];
 
@@ -58,11 +59,13 @@ export function Navigation({
           const isActive =
             item.href === "/contact"
               ? pathname === "/contact"
-              : item.href === "/work"
-                ? pathname === "/work"
-                : item.href === "/"
-                  ? pathname === "/"
-                  : false;
+              : item.href === "/affiliate"
+                ? pathname === "/affiliate"
+                : item.href === "/work"
+                  ? pathname === "/work"
+                  : item.href === "/"
+                    ? pathname === "/"
+                    : false;
 
           return (
             <Link

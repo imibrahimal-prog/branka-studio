@@ -142,8 +142,8 @@ export default async function LocaleLayout({ children, params }: Props) {
       },
     ],
     sameAs: [
-      "https://www.instagram.com/braankacom",
-      "https://x.com/braankacom",
+      "https://www.instagram.com/branka_ksa",
+      "https://x.com/branka_ksa",
       "https://www.linkedin.com/company/braankacom",
       "https://www.tiktok.com/@braankacom",
     ],

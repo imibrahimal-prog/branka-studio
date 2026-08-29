@@ -3,6 +3,8 @@
     "brand": "Branka Advertising & Marketing",
     "title": "Branka Advertising & Marketing | Creative & Digital Agency in Riyadh",
     "contactTitle": "Contact Us | Branka Advertising & Marketing",
+    "affiliateTitle": "Affiliate Marketing | Branka Advertising & Marketing",
+    "affiliateDescription": "Join the Branka Advertising & Marketing Affiliate Program and start earning rewarding commissions through strategic partnerships.",
     "workTitle": "Our Work & Case Studies | Branka Advertising & Marketing",
     "workDescription": "Explore Branka Advertising & Marketing projects across visual identity, paid ad campaigns, web development, apps, and motion graphics.",
     "description": "Branka Advertising & Marketing is a leading creative and digital agency in Riyadh, Saudi Arabia. Delivering brand identities, performance marketing, paid ads, and custom web development.",
@@ -16,6 +18,7 @@
     "projects": "Our Work",
     "methodology": "Methodology",
     "results": "Results",
+    "affiliate": "Affiliate Marketing",
     "vision": "Vision 2030",
     "contact": "Contact Us",
     "menuOpen": "Open menu",
@@ -740,6 +743,77 @@
       }
     }
   },
+  "affiliate": {
+    "pageTitle": "Affiliate Marketing",
+    "pageSubtitle": "Partner with us and earn consistent commissions for every referred client and project.",
+    "eyebrow": "Partnership & Affiliate Program",
+    "title": "Join the Branka Success Partner Network",
+    "description": "We offer a premier affiliate marketing program designed for marketers, creators, and strategic partners to earn immediate, rewarding commissions on every successful project.",
+    "cards": {
+      "phoneTitle": "Direct Call",
+      "phoneValue": "+966 55 240 9575",
+      "emailTitle": "Partner Inquiries",
+      "emailValue": "info@braanka.com",
+      "commissionTitle": "Rewarding Commissions",
+      "commissionValue": "Instant payouts & strategic partnership"
+    },
+    "benefits": {
+      "title": "Benefits of Joining Branka Partner Network",
+      "item1": {
+        "title": "Competitive Commission Rates",
+        "description": "Lucrative and fair profit shares on every executed contract and project you refer."
+      },
+      "item2": {
+        "title": "Fast & Regular Payouts",
+        "description": "Swift and flexible payouts disbursed across project delivery milestones."
+      },
+      "item3": {
+        "title": "Full Strategic & Technical Support",
+        "description": "Comprehensive marketing collateral and guidance to easily pitch Branka services to your clients."
+      }
+    },
+    "channels": {
+      "instagram": "Instagram",
+      "x": "X (Twitter)",
+      "linkedin": "LinkedIn",
+      "whatsapp": "WhatsApp",
+      "email": "Email"
+    },
+    "form": {
+      "heading": "Join Affiliate Program",
+      "subheading": "Fill in your details below and the Branka team will reach out to activate your partnership and provide all working mechanisms.",
+      "name": "Name",
+      "namePlaceholder": "Your name or marketing agency name",
+      "contact": "Email or Phone",
+      "contactPlaceholder": "Email address or WhatsApp number",
+      "service": "Service Type",
+      "serviceValue": "Affiliate Marketing",
+      "serviceBadge": "Official Program",
+      "message": "Notes",
+      "messagePlaceholder": "Tell us about your marketing channels, past experience, or any questions and notes...",
+      "submitNow": "Submit Now",
+      "submitEmail": "Send via Email",
+      "emailSubject": "Affiliate Marketing Application from {name}",
+      "whatsappIntro": "Hello Branka, I would like to join the Affiliate Marketing program:",
+      "summary": {
+        "name": "Name",
+        "contact": "Contact Details",
+        "service": "Service Type",
+        "message": "Notes"
+      },
+      "status": {
+        "opening": "Message prepared, opening WhatsApp to complete submission."
+      },
+      "errors": {
+        "nameMin": "Name must be at least 2 characters",
+        "nameMax": "Name cannot exceed 100 characters",
+        "contactMin": "Please enter a valid contact method",
+        "contactMax": "Contact details are too long",
+        "messageMin": "Please write at least 5 characters in notes",
+        "messageMax": "Notes cannot exceed 2000 characters"
+      }
+    }
+  },
   "footer": {
     "tagline": "Branka Advertising & Marketing: Uniting strategic brand design and digital solutions to build brands with enduring market impact.",
     "achievements": {
@@ -768,6 +842,7 @@
       "projects": "Our Work",
       "methodology": "Methodology",
       "results": "Results",
+      "affiliate": "Affiliate Marketing",
       "contact": "Contact Us",
       "instagram": "Instagram",
       "x": "X (Twitter)",

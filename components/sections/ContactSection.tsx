@@ -38,8 +38,8 @@ export function ContactSection() {
   const contactEmail =
     process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "info@braanka.com";
   const instagramUrl =
-    process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? "https://www.instagram.com/i_dd_m";
-  const xUrl = process.env.NEXT_PUBLIC_X_URL ?? "https://x.com/i_dd_m";
+    process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? "https://www.instagram.com/branka_ksa";
+  const xUrl = process.env.NEXT_PUBLIC_X_URL ?? "https://x.com/branka_ksa";
   const linkedinUrl = process.env.NEXT_PUBLIC_LINKEDIN_URL;
   const whatsappUrl =
     process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "https://wa.me/966552409575";
