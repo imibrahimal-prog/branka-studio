@@ -9,7 +9,7 @@ import { z } from "zod";
 import {
   PhoneCall,
   Mail,
-  MapPin,
+  TrendingUp,
   MessageCircle,
   UserRound,
   AtSign,
@@ -19,6 +19,11 @@ import {
   Instagram,
   Linkedin,
   Twitter,
+  CheckCircle2,
+  Lock,
+  Percent,
+  Coins,
+  ShieldCheck,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -31,8 +36,8 @@ type FormValues = {
 
 type FormStatus = "idle" | "opening";
 
-export function ContactPageContent() {
-  const t = useTranslations("contact");
+export function AffiliatePageContent() {
+  const t = useTranslations("affiliate");
   const [status, setStatus] = useState<FormStatus>("idle");
 
   const contactEmail =
@@ -54,10 +59,10 @@ export function ContactPageContent() {
       .string()
       .min(5, t("form.errors.contactMin"))
       .max(160, t("form.errors.contactMax")),
-    service: z.string().min(1, t("form.errors.serviceRequired")),
+    service: z.string().default(t("form.serviceValue")),
     message: z
       .string()
-      .min(10, t("form.errors.messageMin"))
+      .min(5, t("form.errors.messageMin"))
       .max(2000, t("form.errors.messageMax")),
   });
 
@@ -71,27 +76,18 @@ export function ContactPageContent() {
     defaultValues: {
       name: "",
       contact: "",
-      service: "identity",
+      service: t("form.serviceValue"),
       message: "",
     },
   });
 
   function buildMessage(data: FormValues) {
-    const serviceKey = data.service as
-      | "identity"
-      | "commerce"
-      | "content"
-      | "motion"
-      | "other";
-    const serviceLabel = t.has(`form.services.${serviceKey}`)
-      ? t(`form.services.${serviceKey}`)
-      : data.service;
     return [
       t("form.whatsappIntro"),
       "",
       `*${t("form.summary.name")}:* ${data.name}`,
       `*${t("form.summary.contact")}:* ${data.contact}`,
-      `*${t("form.summary.service")}:* ${serviceLabel}`,
+      `*${t("form.summary.service")}:* ${t("form.serviceValue")}`,
       "",
       `*${t("form.summary.message")}:*`,
       data.message,
@@ -107,7 +103,12 @@ export function ContactPageContent() {
       "_blank",
       "noopener,noreferrer",
     );
-    reset();
+    reset({
+      name: "",
+      contact: "",
+      service: t("form.serviceValue"),
+      message: "",
+    });
     window.setTimeout(() => setStatus("idle"), 5000);
   }
 
@@ -117,7 +118,12 @@ export function ContactPageContent() {
     window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(
       t("form.emailSubject", { name: data.name }),
     )}&body=${encodeURIComponent(body)}`;
-    reset();
+    reset({
+      name: "",
+      contact: "",
+      service: t("form.serviceValue"),
+      message: "",
+    });
     window.setTimeout(() => setStatus("idle"), 5000);
   }
 
@@ -204,7 +210,7 @@ export function ContactPageContent() {
         <div className="luxury-container relative">
           <div className="mx-auto max-w-6xl">
             <div className="grid items-stretch gap-6 lg:grid-cols-[0.35fr_0.65fr] lg:gap-8">
-              {/* Left Column: 3 Contact Info Cards in Dark Brown with Beige/Cream Text */}
+              {/* Left Column: Contact & Partner Info Cards */}
               <motion.div
                 initial={{ opacity: 0, x: -24 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -250,24 +256,43 @@ export function ContactPageContent() {
                   </div>
                 </a>
 
-                {/* Card 3: Location */}
+                {/* Card 3: Commission & Rewards Highlight */}
                 <div className="relative flex items-center justify-between gap-4 rounded-[1.6rem] border border-white/10 bg-[#241712] p-6 shadow-[0_10px_35px_rgba(0,0,0,0.15)]">
                   <div className="flex flex-col">
                     <span className="text-xs font-semibold uppercase tracking-wider text-luxury-gold">
-                      {t("cards.locationTitle")}
+                      {t("cards.commissionTitle")}
                     </span>
                     <span className="mt-1 text-base md:text-lg font-bold text-[#fbf8f2]">
-                      {t("cards.locationValue")}
+                      {t("cards.commissionValue")}
                     </span>
                   </div>
                   <div className="flex h-13 w-13 shrink-0 items-center justify-center rounded-2xl border border-luxury-gold/35 bg-luxury-gold/15 text-luxury-gold">
-                    <MapPin className="h-5 w-5" />
+                    <TrendingUp className="h-5 w-5" />
+                  </div>
+                </div>
+
+                {/* Partner Benefits Mini-Pill Badges */}
+                <div className="grid gap-2.5 rounded-[1.6rem] border border-white/10 bg-[#241712] p-5">
+                  <span className="text-xs font-bold uppercase tracking-wider text-luxury-gold mb-1">
+                    {t("benefits.title")}
+                  </span>
+                  <div className="flex items-start gap-2.5 text-xs text-[#e8ded3]">
+                    <Coins className="h-4 w-4 shrink-0 text-luxury-gold mt-0.5" />
+                    <span>{t("benefits.item1.title")}</span>
+                  </div>
+                  <div className="flex items-start gap-2.5 text-xs text-[#e8ded3]">
+                    <CheckCircle2 className="h-4 w-4 shrink-0 text-luxury-gold mt-0.5" />
+                    <span>{t("benefits.item2.title")}</span>
+                  </div>
+                  <div className="flex items-start gap-2.5 text-xs text-[#e8ded3]">
+                    <ShieldCheck className="h-4 w-4 shrink-0 text-luxury-gold mt-0.5" />
+                    <span>{t("benefits.item3.title")}</span>
                   </div>
                 </div>
 
                 {/* Social channels pill list */}
                 {socialLinks.length > 0 && (
-                  <div className="flex flex-wrap items-center gap-2 pt-2">
+                  <div className="flex flex-wrap items-center gap-2 pt-1">
                     {socialLinks.map(({ href, label, icon: Icon }) => (
                       <a
                         key={href}
@@ -288,7 +313,7 @@ export function ContactPageContent() {
                 )}
               </motion.div>
 
-              {/* Right Column: Main Form Card in Dark Brown with Luxury Beige Data Fields */}
+              {/* Right Column: Main Form Card with Fixed "التسويق بالعمولة" Option */}
               <motion.div
                 initial={{ opacity: 0, x: 24 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -327,7 +352,7 @@ export function ContactPageContent() {
                             {t("form.name")}
                           </span>
                           <input
-                            id="page-name"
+                            id="affiliate-name"
                             type="text"
                             autoComplete="name"
                             placeholder={t("form.namePlaceholder")}
@@ -359,7 +384,7 @@ export function ContactPageContent() {
                             {t("form.contact")}
                           </span>
                           <input
-                            id="page-contact"
+                            id="affiliate-contact"
                             type="text"
                             autoComplete="email"
                             placeholder={t("form.contactPlaceholder")}
@@ -376,52 +401,39 @@ export function ContactPageContent() {
                     </div>
                   </div>
 
-                  {/* Service Selection */}
+                  {/* Fixed Single Service Option: التسويق بالعمولة (Affiliate Marketing) */}
                   <div>
-                    <div
-                      className={cn(
-                        "flex min-h-[76px] w-full items-center gap-3.5 rounded-[1.35rem] border border-[#e4d7c7] bg-[#f8f4ec] px-4 py-3 shadow-sm transition-all duration-300 focus-within:-translate-y-0.5 focus-within:border-luxury-gold focus-within:bg-[#fbf9f4] focus-within:shadow-[0_10px_30px_rgba(0,0,0,0.08)]",
-                        errors.service && "border-red-500",
-                      )}
-                    >
-                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#dac4ad] bg-[#ebdcc8] text-[#241712]">
-                        <BriefcaseBusiness className="h-4 w-4" />
-                      </span>
-                      <span className="min-w-0 flex-1">
-                        <span className="mb-0.5 block text-[11px] font-bold uppercase tracking-wider text-[#7a5c46]">
-                          {t("form.service")}
+                    <div className="flex min-h-[76px] w-full items-center justify-between gap-3.5 rounded-[1.35rem] border border-luxury-gold/50 bg-[#f8f4ec] px-4 py-3 shadow-[0_4px_20px_rgba(199,164,106,0.12)]">
+                      <div className="flex min-w-0 items-center gap-3.5 flex-1">
+                        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-luxury-gold/40 bg-gradient-to-br from-luxury-gold/25 to-luxury-gold/10 text-[#7a5c46]">
+                          <BriefcaseBusiness className="h-4 w-4 text-[#8a6840]" />
                         </span>
-                        <select
-                          id="page-service"
-                          className="block w-full border-0 bg-transparent p-0 text-sm font-semibold leading-6 text-[#23150e] outline-none cursor-pointer focus:outline-none focus:ring-0"
-                          {...register("service")}
-                        >
-                          <option value="identity" className="bg-[#f8f4ec] text-[#23150e]">
-                            {t("form.services.identity")}
-                          </option>
-                          <option value="commerce" className="bg-[#f8f4ec] text-[#23150e]">
-                            {t("form.services.commerce")}
-                          </option>
-                          <option value="content" className="bg-[#f8f4ec] text-[#23150e]">
-                            {t("form.services.content")}
-                          </option>
-                          <option value="motion" className="bg-[#f8f4ec] text-[#23150e]">
-                            {t("form.services.motion")}
-                          </option>
-                          <option value="other" className="bg-[#f8f4ec] text-[#23150e]">
-                            {t("form.services.other")}
-                          </option>
-                        </select>
-                      </span>
+                        <span className="min-w-0 flex-1">
+                          <span className="mb-0.5 block text-[11px] font-bold uppercase tracking-wider text-[#7a5c46]">
+                            {t("form.service")}
+                          </span>
+                          <span className="block text-sm sm:text-base font-bold text-[#23150e]">
+                            {t("form.serviceValue")}
+                          </span>
+                        </span>
+                      </div>
+
+                      {/* Lock / Certified Fixed Badge */}
+                      <div className="flex shrink-0 items-center gap-1.5 rounded-full border border-luxury-gold/40 bg-luxury-gold/15 px-3 py-1 text-[11px] font-bold text-[#7a5c46]">
+                        <Lock className="h-3 w-3 text-luxury-gold" />
+                        <span>{t("form.serviceBadge")}</span>
+                      </div>
+
+                      {/* Hidden registered form field ensuring service value is sent */}
+                      <input
+                        type="hidden"
+                        value={t("form.serviceValue")}
+                        {...register("service")}
+                      />
                     </div>
-                    {errors.service && (
-                      <p className="mt-1 px-2 text-xs text-red-400">
-                        {errors.service.message}
-                      </p>
-                    )}
                   </div>
 
-                  {/* Message Textarea */}
+                  {/* Notes / Message Textarea */}
                   <div>
                     <div
                       className={cn(
@@ -437,7 +449,7 @@ export function ContactPageContent() {
                           {t("form.message")}
                         </span>
                         <textarea
-                          id="page-message"
+                          id="affiliate-message"
                           rows={4}
                           placeholder={t("form.messagePlaceholder")}
                           className="block w-full border-0 bg-transparent p-0 text-sm font-semibold leading-6 text-[#23150e] outline-none resize-none placeholder:text-[#9e826e] placeholder:opacity-75 focus:outline-none focus:ring-0"
