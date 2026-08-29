@@ -35,8 +35,8 @@ export function ServiceRequestModal() {
   const contactEmail =
     process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "info@braanka.com";
   const whatsappUrl =
-    process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "https://wa.me/966502757844";
-  const phoneDisplay = "+966 50 275 7844";
+    process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "https://wa.me/966552409575";
+  const phoneDisplay = "+966 55 240 9575";
 
   const formSchema = z.object({
     name: z
@@ -196,7 +196,7 @@ export function ServiceRequestModal() {
                 <div className="flex flex-col justify-between gap-4">
                   {/* Card 1: Call Us */}
                   <a
-                    href="tel:+966502757844"
+                    href="tel:+966552409575"
                     className="group relative flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-white/[0.04] p-5 shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-luxury-gold/50 hover:bg-white/[0.08]"
                   >
                     <div className="flex flex-col">

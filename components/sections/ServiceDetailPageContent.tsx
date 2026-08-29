@@ -56,7 +56,7 @@ export function ServiceDetailPageContent({ service, locale }: Props) {
       "@type": "ProfessionalService",
       name: isRtl ? "برانكا للإعلان والتسويق" : "Branka Advertising & Marketing",
       url: "https://www.braanka.com",
-      telephone: "+966502757844",
+      telephone: "+966552409575",
       email: "info@braanka.com",
       address: {
         "@type": "PostalAddress",
@@ -122,7 +122,7 @@ export function ServiceDetailPageContent({ service, locale }: Props) {
             </Link>
 
             <a
-              href="https://wa.me/966502757844"
+              href="https://wa.me/966552409575"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex min-h-[50px] items-center justify-center gap-2 rounded-full border-2 border-[#241712]/15 bg-[#f5ede2] px-7 py-3.5 text-sm font-semibold text-[#241712] shadow-sm transition-all duration-300 hover:border-luxury-gold hover:bg-[#ebe0d1] hover:text-[#8f522e] cursor-pointer"

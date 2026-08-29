@@ -41,7 +41,7 @@ export function Footer() {
   const contactEmail =
     process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "info@braanka.com";
   const whatsappUrl =
-    process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "https://wa.me/966502757844";
+    process.env.NEXT_PUBLIC_WHATSAPP_URL ?? "https://wa.me/966552409575";
   const socialLinks = [
     instagramUrl
       ? {
