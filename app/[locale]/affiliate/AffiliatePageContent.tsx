@@ -12,7 +12,7 @@ import {
   TrendingUp,
   MessageCircle,
   UserRound,
-  AtSign,
+  Building2,
   BriefcaseBusiness,
   MessageSquareText,
   Sparkles,
@@ -21,20 +21,22 @@ import {
   Twitter,
   CheckCircle2,
   Lock,
-  Percent,
   Coins,
   ShieldCheck,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-type FormValues = {
+type AffiliateFormValues = {
   name: string;
-  contact: string;
+  phone: string;
+  email: string;
+  company?: string;
   service: string;
   message: string;
+  botTrap?: string;
 };
 
-type FormStatus = "idle" | "opening";
+type FormStatus = "idle" | "success" | "opening";
 
 export function AffiliatePageContent() {
   const t = useTranslations("affiliate");
@@ -53,17 +55,32 @@ export function AffiliatePageContent() {
   const formSchema = z.object({
     name: z
       .string()
+      .trim()
       .min(2, t("form.errors.nameMin"))
       .max(100, t("form.errors.nameMax")),
-    contact: z
+    phone: z
       .string()
-      .min(5, t("form.errors.contactMin"))
-      .max(160, t("form.errors.contactMax")),
-    service: z.string().default(t("form.serviceValue")),
+      .trim()
+      .min(8, t("form.errors.phoneInvalid"))
+      .max(30, t("form.errors.phoneInvalid")),
+    email: z
+      .string()
+      .trim()
+      .email(t("form.errors.emailInvalid"))
+      .max(160, t("form.errors.emailInvalid")),
+    company: z
+      .string()
+      .trim()
+      .max(100, t("form.errors.companyMax"))
+      .optional()
+      .or(z.literal("")),
+    service: z.string().min(1, t("form.errors.serviceInvalid")),
     message: z
       .string()
+      .trim()
       .min(5, t("form.errors.messageMin"))
       .max(2000, t("form.errors.messageMax")),
+    botTrap: z.string().max(0).optional(),
   });
 
   const {
@@ -71,32 +88,49 @@ export function AffiliatePageContent() {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-  } = useForm<FormValues>({
+  } = useForm<AffiliateFormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
-      contact: "",
+      phone: "",
+      email: "",
+      company: "",
       service: t("form.serviceValue"),
       message: "",
+      botTrap: "",
     },
   });
 
-  function buildMessage(data: FormValues) {
-    return [
+  function buildMessage(data: AffiliateFormValues) {
+    const summary = [
       t("form.whatsappIntro"),
       "",
-      `*${t("form.summary.name")}:* ${data.name}`,
-      `*${t("form.summary.contact")}:* ${data.contact}`,
+      `*${t("form.summary.name")}:* ${data.name.trim()}`,
+      `*${t("form.summary.phone")}:* ${data.phone.trim()}`,
+      `*${t("form.summary.email")}:* ${data.email.trim()}`,
+    ];
+
+    if (data.company && data.company.trim().length > 0) {
+      summary.push(`*${t("form.summary.company")}:* ${data.company.trim()}`);
+    }
+
+    summary.push(
       `*${t("form.summary.service")}:* ${t("form.serviceValue")}`,
       "",
       `*${t("form.summary.message")}:*`,
-      data.message,
-    ].join("\n");
+      data.message.trim(),
+    );
+
+    return summary.join("\n");
   }
 
-  function onSubmit(data: FormValues) {
+  function onSubmit(data: AffiliateFormValues) {
+    if (data.botTrap && data.botTrap.length > 0) {
+      return;
+    }
+
     const body = buildMessage(data);
-    setStatus("opening");
+    setStatus("success");
     const separator = whatsappUrl.includes("?") ? "&" : "?";
     window.open(
       `${whatsappUrl}${separator}text=${encodeURIComponent(body)}`,
@@ -105,26 +139,36 @@ export function AffiliatePageContent() {
     );
     reset({
       name: "",
-      contact: "",
+      phone: "",
+      email: "",
+      company: "",
       service: t("form.serviceValue"),
       message: "",
+      botTrap: "",
     });
-    window.setTimeout(() => setStatus("idle"), 5000);
+    window.setTimeout(() => setStatus("idle"), 8000);
   }
 
-  function sendEmail(data: FormValues) {
+  function sendEmail(data: AffiliateFormValues) {
+    if (data.botTrap && data.botTrap.length > 0) {
+      return;
+    }
+
     const body = buildMessage(data);
-    setStatus("opening");
+    setStatus("success");
     window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(
-      t("form.emailSubject", { name: data.name }),
+      t("form.emailSubject"),
     )}&body=${encodeURIComponent(body)}`;
     reset({
       name: "",
-      contact: "",
+      phone: "",
+      email: "",
+      company: "",
       service: t("form.serviceValue"),
       message: "",
+      botTrap: "",
     });
-    window.setTimeout(() => setStatus("idle"), 5000);
+    window.setTimeout(() => setStatus("idle"), 8000);
   }
 
   const socialLinks = [
@@ -157,13 +201,13 @@ export function AffiliatePageContent() {
 
   return (
     <div className="min-h-screen bg-[var(--color-background)]">
-      {/* 1. Header Hero Banner with Saudi Vision 2030 Logo and Islamic Art */}
+      {/* 1. Header Hero Banner with Saudi Vision 2030 Logo and Geometric Styling */}
       <section className="relative overflow-hidden bg-[#1c110b] pt-32 pb-16 md:pt-40 md:pb-24">
         {/* Ambient glow effects */}
         <div className="pointer-events-none absolute -start-24 -top-24 h-80 w-80 rounded-full bg-[#704a35]/25 blur-[110px]" />
         <div className="pointer-events-none absolute -end-24 -top-24 h-80 w-80 rounded-full bg-[#c7a46a]/15 blur-[110px]" />
 
-        {/* Islamic & Geometric Luxury Watermark */}
+        {/* Geometric Luxury Watermark */}
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.035]"
           style={{
@@ -334,7 +378,17 @@ export function AffiliatePageContent() {
                   className="space-y-4"
                   noValidate
                 >
-                  {/* Name & Contact Row */}
+                  {/* Anti-spam Honeypot (hidden) */}
+                  <input
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    className="hidden"
+                    aria-hidden="true"
+                    {...register("botTrap")}
+                  />
+
+                  {/* Row 1: Name & Phone/WhatsApp */}
                   <div className="grid gap-4 sm:grid-cols-2">
                     {/* Name */}
                     <div>
@@ -348,9 +402,12 @@ export function AffiliatePageContent() {
                           <UserRound className="h-4 w-4" />
                         </span>
                         <span className="min-w-0 flex-1">
-                          <span className="mb-0.5 block text-[11px] font-bold uppercase tracking-wider text-[#7a5c46]">
+                          <label
+                            htmlFor="affiliate-name"
+                            className="mb-0.5 block text-[11px] font-bold uppercase tracking-wider text-[#7a5c46]"
+                          >
                             {t("form.name")}
-                          </span>
+                          </label>
                           <input
                             id="affiliate-name"
                             type="text"
@@ -368,34 +425,111 @@ export function AffiliatePageContent() {
                       )}
                     </div>
 
-                    {/* Contact (Email / Phone) */}
+                    {/* Phone & WhatsApp */}
                     <div>
                       <div
                         className={cn(
                           "flex min-h-[76px] w-full items-center gap-3.5 rounded-[1.35rem] border border-[#e4d7c7] bg-[#f8f4ec] px-4 py-3 shadow-sm transition-all duration-300 focus-within:-translate-y-0.5 focus-within:border-luxury-gold focus-within:bg-[#fbf9f4] focus-within:shadow-[0_10px_30px_rgba(0,0,0,0.08)]",
-                          errors.contact && "border-red-500",
+                          errors.phone && "border-red-500",
                         )}
                       >
                         <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#dac4ad] bg-[#ebdcc8] text-[#241712]">
-                          <AtSign className="h-4 w-4" />
+                          <PhoneCall className="h-4 w-4" />
                         </span>
                         <span className="min-w-0 flex-1">
-                          <span className="mb-0.5 block text-[11px] font-bold uppercase tracking-wider text-[#7a5c46]">
-                            {t("form.contact")}
-                          </span>
+                          <label
+                            htmlFor="affiliate-phone"
+                            className="mb-0.5 block text-[11px] font-bold uppercase tracking-wider text-[#7a5c46]"
+                          >
+                            {t("form.phone")}
+                          </label>
                           <input
-                            id="affiliate-contact"
-                            type="text"
-                            autoComplete="email"
-                            placeholder={t("form.contactPlaceholder")}
-                            className="block w-full border-0 bg-transparent p-0 text-sm font-semibold leading-6 text-[#23150e] outline-none placeholder:text-[#9e826e] placeholder:opacity-75 focus:outline-none focus:ring-0"
-                            {...register("contact")}
+                            id="affiliate-phone"
+                            type="tel"
+                            dir="ltr"
+                            autoComplete="tel"
+                            placeholder={t("form.phonePlaceholder")}
+                            className="block w-full border-0 bg-transparent p-0 text-sm font-semibold leading-6 text-[#23150e] outline-none placeholder:text-[#9e826e] placeholder:opacity-75 focus:outline-none focus:ring-0 text-start"
+                            {...register("phone")}
                           />
                         </span>
                       </div>
-                      {errors.contact && (
+                      {errors.phone && (
                         <p className="mt-1 px-2 text-xs text-red-400">
-                          {errors.contact.message}
+                          {errors.phone.message}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Row 2: Email & Business Name */}
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    {/* Email */}
+                    <div>
+                      <div
+                        className={cn(
+                          "flex min-h-[76px] w-full items-center gap-3.5 rounded-[1.35rem] border border-[#e4d7c7] bg-[#f8f4ec] px-4 py-3 shadow-sm transition-all duration-300 focus-within:-translate-y-0.5 focus-within:border-luxury-gold focus-within:bg-[#fbf9f4] focus-within:shadow-[0_10px_30px_rgba(0,0,0,0.08)]",
+                          errors.email && "border-red-500",
+                        )}
+                      >
+                        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#dac4ad] bg-[#ebdcc8] text-[#241712]">
+                          <Mail className="h-4 w-4" />
+                        </span>
+                        <span className="min-w-0 flex-1">
+                          <label
+                            htmlFor="affiliate-email"
+                            className="mb-0.5 block text-[11px] font-bold uppercase tracking-wider text-[#7a5c46]"
+                          >
+                            {t("form.email")}
+                          </label>
+                          <input
+                            id="affiliate-email"
+                            type="email"
+                            dir="ltr"
+                            autoComplete="email"
+                            placeholder={t("form.emailPlaceholder")}
+                            className="block w-full border-0 bg-transparent p-0 text-sm font-semibold leading-6 text-[#23150e] outline-none placeholder:text-[#9e826e] placeholder:opacity-75 focus:outline-none focus:ring-0 text-start"
+                            {...register("email")}
+                          />
+                        </span>
+                      </div>
+                      {errors.email && (
+                        <p className="mt-1 px-2 text-xs text-red-400">
+                          {errors.email.message}
+                        </p>
+                      )}
+                    </div>
+
+                    {/* Business Name (Optional) */}
+                    <div>
+                      <div
+                        className={cn(
+                          "flex min-h-[76px] w-full items-center gap-3.5 rounded-[1.35rem] border border-[#e4d7c7] bg-[#f8f4ec] px-4 py-3 shadow-sm transition-all duration-300 focus-within:-translate-y-0.5 focus-within:border-luxury-gold focus-within:bg-[#fbf9f4] focus-within:shadow-[0_10px_30px_rgba(0,0,0,0.08)]",
+                          errors.company && "border-red-500",
+                        )}
+                      >
+                        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#dac4ad] bg-[#ebdcc8] text-[#241712]">
+                          <Building2 className="h-4 w-4" />
+                        </span>
+                        <span className="min-w-0 flex-1">
+                          <label
+                            htmlFor="affiliate-company"
+                            className="mb-0.5 block text-[11px] font-bold uppercase tracking-wider text-[#7a5c46]"
+                          >
+                            {t("form.company")}
+                          </label>
+                          <input
+                            id="affiliate-company"
+                            type="text"
+                            placeholder={t("form.companyPlaceholder")}
+                            className="block w-full border-0 bg-transparent p-0 text-sm font-semibold leading-6 text-[#23150e] outline-none placeholder:text-[#9e826e] placeholder:opacity-75 focus:outline-none focus:ring-0"
+                            {...register("company")}
+                          />
+                        </span>
+                      </div>
+                      {errors.company && (
+                        <p className="mt-1 px-2 text-xs text-red-400">
+                          {errors.company.message}
                         </p>
                       )}
                     </div>
@@ -445,9 +579,12 @@ export function AffiliatePageContent() {
                         <MessageSquareText className="h-4 w-4" />
                       </span>
                       <span className="min-w-0 flex-1">
-                        <span className="mb-0.5 block text-[11px] font-bold uppercase tracking-wider text-[#7a5c46]">
+                        <label
+                          htmlFor="affiliate-message"
+                          className="mb-0.5 block text-[11px] font-bold uppercase tracking-wider text-[#7a5c46]"
+                        >
                           {t("form.message")}
-                        </span>
+                        </label>
                         <textarea
                           id="affiliate-message"
                           rows={4}
@@ -479,22 +616,24 @@ export function AffiliatePageContent() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="inline-flex min-h-[54px] items-center justify-center gap-3 rounded-full bg-gradient-to-r from-[#d4b88a] via-[#c7a46a] to-[#a8884f] px-9 py-3.5 text-sm font-bold text-[#1a0f0a] shadow-[0_8px_30px_rgba(199,164,106,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_40px_rgba(199,164,106,0.5)] active:translate-y-0 disabled:opacity-50"
+                      className="inline-flex min-h-[54px] items-center justify-center gap-3 rounded-full bg-gradient-to-r from-[#d4b88a] via-[#c7a46a] to-[#a8884f] px-9 py-3.5 text-sm font-bold text-[#1a0f0a] shadow-[0_8px_30px_rgba(199,164,106,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_40px_rgba(199,164,106,0.5)] active:translate-y-0 disabled:opacity-50 cursor-pointer"
                     >
                       <span>{t("form.submitNow")}</span>
                       <span className="text-sm font-bold rtl:rotate-180">→</span>
                     </button>
                   </div>
 
-                  {status === "opening" && (
-                    <motion.p
+                  {/* Success / Status Message */}
+                  {status === "success" && (
+                    <motion.div
                       initial={{ opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
                       role="status"
-                      className="text-center text-sm font-medium text-[#d4b88a] pt-2"
+                      className="mt-4 flex items-center gap-3 rounded-2xl border border-emerald-500/30 bg-emerald-950/40 p-4 text-xs md:text-sm text-emerald-200"
                     >
-                      {t("form.status.opening")}
-                    </motion.p>
+                      <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-400" />
+                      <span>{t("form.status.success")}</span>
+                    </motion.div>
                   )}
                 </form>
               </motion.div>

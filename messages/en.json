@@ -1,13 +1,13 @@
 {
   "metadata": {
     "brand": "Branka Advertising & Marketing",
-    "title": "Branka Advertising & Marketing | Creative & Digital Agency in Riyadh",
+    "title": "Branka | Modern Integrated Digital Marketing",
     "contactTitle": "Contact Us | Branka Advertising & Marketing",
-    "affiliateTitle": "Affiliate Marketing | Branka Advertising & Marketing",
-    "affiliateDescription": "Join the Branka Advertising & Marketing Affiliate Program and start earning rewarding commissions through strategic partnerships.",
+    "affiliateTitle": "Affiliate Marketing | Branka",
+    "affiliateDescription": "Join Branka’s affiliate program, refer businesses seeking marketing and creative services, and earn an agreed commission when a successful contract is completed.",
     "workTitle": "Our Work & Case Studies | Branka Advertising & Marketing",
     "workDescription": "Explore Branka Advertising & Marketing projects across visual identity, paid ad campaigns, web development, apps, and motion graphics.",
-    "description": "Branka Advertising & Marketing is a leading creative and digital agency in Riyadh, Saudi Arabia. Delivering brand identities, performance marketing, paid ads, and custom web development.",
+    "description": "Grow your business with Branka through integrated digital marketing, content, advertising campaigns, branding, and website design solutions.",
     "keywords": "Branka Advertising & Marketing, digital marketing agency Saudi Arabia, visual identity Riyadh, advertising agency Riyadh, web development Saudi Arabia, paid ads management"
   },
   "navigation": {
@@ -745,10 +745,10 @@
   },
   "affiliate": {
     "pageTitle": "Affiliate Marketing",
-    "pageSubtitle": "Partner with us and earn consistent commissions for every referred client and project.",
-    "eyebrow": "Partnership & Affiliate Program",
-    "title": "Join the Branka Success Partner Network",
-    "description": "We offer a premier affiliate marketing program designed for marketers, creators, and strategic partners to earn immediate, rewarding commissions on every successful project.",
+    "pageSubtitle": "Join Branka’s partner program, refer businesses seeking marketing and creative services, and earn an agreed commission when a successful paid contract is completed.",
+    "eyebrow": "Branka Partner Program",
+    "title": "Affiliate Marketing",
+    "description": "Join Branka’s partner program, refer businesses seeking marketing and creative services, and earn an agreed commission when a successful paid contract is completed.",
     "cards": {
       "phoneTitle": "Direct Call",
       "phoneValue": "+966 55 240 9575",
@@ -783,33 +783,42 @@
       "heading": "Join Affiliate Program",
       "subheading": "Fill in your details below and the Branka team will reach out to activate your partnership and provide all working mechanisms.",
       "name": "Name",
-      "namePlaceholder": "Your name or marketing agency name",
-      "contact": "Email or Phone",
-      "contactPlaceholder": "Email address or WhatsApp number",
+      "namePlaceholder": "Your full name",
+      "phone": "Phone & WhatsApp Number",
+      "phonePlaceholder": "+966 5x xxx xxxx",
+      "email": "Email Address",
+      "emailPlaceholder": "example@domain.com",
+      "company": "Business Name (Optional)",
+      "companyPlaceholder": "Your company or marketing agency name (optional)",
       "service": "Service Type",
       "serviceValue": "Affiliate Marketing",
       "serviceBadge": "Official Program",
-      "message": "Notes",
-      "messagePlaceholder": "Tell us about your marketing channels, past experience, or any questions and notes...",
-      "submitNow": "Submit Now",
+      "message": "Tell us about your experience or how you reach potential clients",
+      "messagePlaceholder": "Share your marketing experience, network, or how you connect with prospective business clients...",
+      "submitNow": "Submit Application",
       "submitEmail": "Send via Email",
-      "emailSubject": "Affiliate Marketing Application from {name}",
-      "whatsappIntro": "Hello Branka, I would like to join the Affiliate Marketing program:",
+      "emailSubject": "Affiliate Marketing Application — Branka",
+      "whatsappIntro": "Hello Branka, I would like to submit an application for the Affiliate Marketing program:",
       "summary": {
         "name": "Name",
-        "contact": "Contact Details",
+        "phone": "Phone & WhatsApp",
+        "email": "Email Address",
+        "company": "Business Name",
         "service": "Service Type",
-        "message": "Notes"
+        "message": "Experience / Client Reach"
       },
       "status": {
-        "opening": "Message prepared, opening WhatsApp to complete submission."
+        "opening": "Message prepared, opening WhatsApp to complete submission.",
+        "success": "Your application has been received successfully, and the Branka team will contact you after review."
       },
       "errors": {
         "nameMin": "Name must be at least 2 characters",
         "nameMax": "Name cannot exceed 100 characters",
-        "contactMin": "Please enter a valid contact method",
-        "contactMax": "Contact details are too long",
-        "messageMin": "Please write at least 5 characters in notes",
+        "phoneInvalid": "Please enter a valid phone or WhatsApp number",
+        "emailInvalid": "Please enter a valid email address",
+        "companyMax": "Business name cannot exceed 100 characters",
+        "serviceInvalid": "Service type must be Affiliate Marketing",
+        "messageMin": "Please write at least 5 characters explaining your experience or client reach",
         "messageMax": "Notes cannot exceed 2000 characters"
       }
     }

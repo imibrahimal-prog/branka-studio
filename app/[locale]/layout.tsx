@@ -65,7 +65,7 @@ export async function generateMetadata({ params }: Props) {
       },
     },
     openGraph: {
-      title: `${t("title")} | ${brandName}`,
+      title: t("title"),
       description: t("description"),
       type: "website",
       url: `${siteUrl}/${locale}`,
@@ -82,7 +82,7 @@ export async function generateMetadata({ params }: Props) {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${t("title")} | ${brandName}`,
+      title: t("title"),
       description: t("description"),
       images: ["/images/branka-vertical-logo-bg.png"],
     },
