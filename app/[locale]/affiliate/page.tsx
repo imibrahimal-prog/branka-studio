@@ -8,16 +8,44 @@ type Props = {
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
+  const isRtl = locale === "ar";
+  const siteUrl = "https://www.braanka.com";
+  const title = t("affiliateTitle");
+  const description = t("affiliateDescription");
 
   return {
-    title: t("affiliateTitle"),
-    description: t("affiliateDescription"),
+    title: {
+      absolute: title,
+    },
+    description,
     alternates: {
-      canonical: `https://braanka.com/${locale}/affiliate`,
+      canonical: `${siteUrl}/${locale}/affiliate`,
       languages: {
-        ar: "https://braanka.com/ar/affiliate",
-        en: "https://braanka.com/en/affiliate",
+        ar: `${siteUrl}/ar/affiliate`,
+        en: `${siteUrl}/en/affiliate`,
       },
+    },
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      url: `${siteUrl}/${locale}/affiliate`,
+      locale: isRtl ? "ar_SA" : "en_US",
+      siteName: isRtl ? "برانكا للإعلان والتسويق" : "Branka Advertising & Marketing",
+      images: [
+        {
+          url: "/images/branka-vertical-logo-bg.png",
+          width: 1200,
+          height: 1440,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/images/branka-vertical-logo-bg.png"],
     },
   };
 }
