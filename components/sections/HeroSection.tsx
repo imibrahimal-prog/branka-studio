@@ -121,12 +121,14 @@ export function HeroSection() {
             </Link>
 
             {/* Secondary Button */}
-            <Link
-              href="/work"
+            <a
+              href="/documents/branka-profile.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex min-h-[50px] items-center justify-center rounded-full border border-white/20 bg-white/[0.05] px-7 py-3 text-sm font-medium text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-luxury-gold hover:bg-white/[0.1] hover:text-luxury-gold cursor-pointer"
             >
               <span>{t("ctaSecondary")}</span>
-            </Link>
+            </a>
           </motion.div>
 
           {/* Services Badges in 2 Balanced Rows */}
