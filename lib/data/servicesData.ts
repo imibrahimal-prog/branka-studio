@@ -553,7 +553,7 @@ export const servicesList: ServiceItemData[] = [
   // 6. تصميم المواقع والمتاجر (Web & E-Commerce Development)
   {
     slug: "web-development",
-    image: "/images/services/web-3d.jpg",
+    image: "/images/services/web-3d-v2.jpg",
     titleAr: "تصميم وتطوير المواقع والمتاجر الإلكترونية",
     titleEn: "Web & E-Commerce Platform Development",
     taglineAr: "منصات رقمية سريعة وفائقة الأداء مصممة لتحويل الزوار إلى عملاء مخلصين",
